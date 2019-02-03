@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		42ACAF2B93BAA10B6D92B3B3 /* Pods_piggy_bank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE749E0BC1F4775EA1B3513E /* Pods_piggy_bank.framework */; };
+		93C1FEB5220710B700646A92 /* ScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB4220710B700646A92 /* ScreenRouter.swift */; };
+		93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB62207128700646A92 /* BillsListViewModel.swift */; };
 		93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D722070CF500AA88AF /* AppDelegate.swift */; };
-		93F991DA22070CF500AA88AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D922070CF500AA88AF /* ViewController.swift */; };
+		93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D922070CF500AA88AF /* BillsListViewController.swift */; };
 		93F991DD22070CF500AA88AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DB22070CF500AA88AF /* Main.storyboard */; };
 		93F991DF22070CF600AA88AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DE22070CF600AA88AF /* Assets.xcassets */; };
 		93F991E222070CF600AA88AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991E022070CF600AA88AF /* LaunchScreen.storyboard */; };
@@ -18,9 +20,11 @@
 
 /* Begin PBXFileReference section */
 		2A813D44B9075DED53DB9645 /* Pods-piggy-bank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piggy-bank.release.xcconfig"; path = "Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank.release.xcconfig"; sourceTree = "<group>"; };
+		93C1FEB4220710B700646A92 /* ScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouter.swift; sourceTree = "<group>"; };
+		93C1FEB62207128700646A92 /* BillsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewModel.swift; sourceTree = "<group>"; };
 		93F991D422070CF500AA88AF /* piggy-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F991D722070CF500AA88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93F991D922070CF500AA88AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93F991D922070CF500AA88AF /* BillsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewController.swift; sourceTree = "<group>"; };
 		93F991DC22070CF500AA88AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93F991DE22070CF600AA88AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93F991E122070CF600AA88AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				93F991E922070DFB00AA88AF /* View */,
 				93F991EE22070E2B00AA88AF /* NetworkService */,
 				93F991ED22070E2400AA88AF /* Resources */,
+				93C1FEB4220710B700646A92 /* ScreenRouter.swift */,
 				93F991D722070CF500AA88AF /* AppDelegate.swift */,
 			);
 			path = "piggy-bank";
@@ -84,7 +89,7 @@
 		93F991E922070DFB00AA88AF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				93F991D922070CF500AA88AF /* ViewController.swift */,
+				93F991D922070CF500AA88AF /* BillsListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 		93F991EC22070E1E00AA88AF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				93C1FEB62207128700646A92 /* BillsListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -267,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F991DA22070CF500AA88AF /* ViewController.swift in Sources */,
+				93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */,
 				93F991F122070E6400AA88AF /* NetworkService.swift in Sources */,
+				93C1FEB5220710B700646A92 /* ScreenRouter.swift in Sources */,
 				93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */,
+				93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N2SWT747N;
-				INFOPLIST_FILE = "piggy-bank/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/piggy-bank/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,7 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N2SWT747N;
-				INFOPLIST_FILE = "piggy-bank/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/piggy-bank/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
