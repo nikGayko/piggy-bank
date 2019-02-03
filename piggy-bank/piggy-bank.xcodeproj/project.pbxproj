@@ -10,6 +10,10 @@
 		42ACAF2B93BAA10B6D92B3B3 /* Pods_piggy_bank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE749E0BC1F4775EA1B3513E /* Pods_piggy_bank.framework */; };
 		93C1FEB5220710B700646A92 /* ScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB4220710B700646A92 /* ScreenRouter.swift */; };
 		93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB62207128700646A92 /* BillsListViewModel.swift */; };
+		93C1FEB92207130900646A92 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB82207130900646A92 /* BaseViewModel.swift */; };
+		93C1FEBC220713AA00646A92 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEBB220713AA00646A92 /* ViewModelAssembly.swift */; };
+		93C1FEBE22071B7400646A92 /* ModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEBD22071B7400646A92 /* ModelAssembly.swift */; };
+		93C1FEC022071C4700646A92 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEBF22071C4700646A92 /* ApplicationAssembly.swift */; };
 		93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D722070CF500AA88AF /* AppDelegate.swift */; };
 		93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D922070CF500AA88AF /* BillsListViewController.swift */; };
 		93F991DD22070CF500AA88AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DB22070CF500AA88AF /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 		2A813D44B9075DED53DB9645 /* Pods-piggy-bank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piggy-bank.release.xcconfig"; path = "Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank.release.xcconfig"; sourceTree = "<group>"; };
 		93C1FEB4220710B700646A92 /* ScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouter.swift; sourceTree = "<group>"; };
 		93C1FEB62207128700646A92 /* BillsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewModel.swift; sourceTree = "<group>"; };
+		93C1FEB82207130900646A92 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		93C1FEBB220713AA00646A92 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
+		93C1FEBD22071B7400646A92 /* ModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAssembly.swift; sourceTree = "<group>"; };
+		93C1FEBF22071C4700646A92 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
 		93F991D422070CF500AA88AF /* piggy-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F991D722070CF500AA88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F991D922070CF500AA88AF /* BillsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +62,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		93C1FEBA2207139E00646A92 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				93C1FEBB220713AA00646A92 /* ViewModelAssembly.swift */,
+				93C1FEBD22071B7400646A92 /* ModelAssembly.swift */,
+				93C1FEBF22071C4700646A92 /* ApplicationAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		93F991CB22070CF500AA88AF = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +93,9 @@
 		93F991D622070CF500AA88AF /* piggy-bank */ = {
 			isa = PBXGroup;
 			children = (
-				93F991EC22070E1E00AA88AF /* ViewModel */,
+				93C1FEBA2207139E00646A92 /* Assembly */,
 				93F991EA22070E0E00AA88AF /* Model */,
+				93F991EC22070E1E00AA88AF /* ViewModel */,
 				93F991E922070DFB00AA88AF /* View */,
 				93F991EE22070E2B00AA88AF /* NetworkService */,
 				93F991ED22070E2400AA88AF /* Resources */,
@@ -105,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				93C1FEB62207128700646A92 /* BillsListViewModel.swift */,
+				93C1FEB82207130900646A92 /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -225,6 +245,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicJSON/DynamicJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/FieryCrucible/FieryCrucible.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -235,6 +256,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FieryCrucible.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -275,9 +297,13 @@
 			files = (
 				93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */,
 				93F991F122070E6400AA88AF /* NetworkService.swift in Sources */,
+				93C1FEBC220713AA00646A92 /* ViewModelAssembly.swift in Sources */,
 				93C1FEB5220710B700646A92 /* ScreenRouter.swift in Sources */,
 				93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */,
 				93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */,
+				93C1FEB92207130900646A92 /* BaseViewModel.swift in Sources */,
+				93C1FEC022071C4700646A92 /* ApplicationAssembly.swift in Sources */,
+				93C1FEBE22071B7400646A92 /* ModelAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

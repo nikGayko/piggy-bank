@@ -10,5 +10,6 @@ target 'piggy-bank' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Alamofire'
+  pod 'FieryCrucible'
   
 end

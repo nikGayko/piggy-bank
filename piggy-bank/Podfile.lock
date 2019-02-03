@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.0)
   - DynamicJSON (2.0.0)
+  - FieryCrucible (3.0.1)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -10,6 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DynamicJSON
+  - FieryCrucible
   - RxCocoa
   - RxSwift
 
@@ -17,6 +19,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - DynamicJSON
+    - FieryCrucible
     - RxAtomic
     - RxCocoa
     - RxSwift
@@ -24,10 +27,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   DynamicJSON: 1ecdda7702e214f6bde11df78a07f9ec6b0ebf92
+  FieryCrucible: 066a11813aa50ca2240c79239d85bfab45d23b35
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: ad7c687a14c729553e31c5847a5c21e32b3833a4
+PODFILE CHECKSUM: 685be083582da99b9ced873e5367fc49ad31e50e
 
 COCOAPODS: 1.5.3
