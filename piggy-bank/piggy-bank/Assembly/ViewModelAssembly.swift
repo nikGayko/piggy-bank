@@ -25,6 +25,12 @@ class ViewModelAssembly: DependencyFactory {
         })
     }
     
+    func composeBillVC() -> ComposeBillViewModel {
+        return scoped(ComposeBillViewModel(), configure: { (instance) in
+            self.setupPropertiesAndInit(instance)
+        })
+    }
+    
     private func setupPropertiesAndInit(_ viewModel: BaseViewModel) {
         viewModel.networkService = modelAssembly.networkService()
         viewModel.screenRouter = screenRouter

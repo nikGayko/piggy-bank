@@ -18,6 +18,8 @@ class ApplicationAssembly {
         modelAssembly = ModelAssembly()
         screenRouter = ScreenRouter()
         viewModelAssembly = ViewModelAssembly(modelAssembly: modelAssembly, screenRouter: screenRouter)
+        
+        screenRouter.viewModelAssembly = viewModelAssembly
     }
     
 }

@@ -7,8 +7,7 @@ target 'piggy-bank' do
 
   pod 'Alamofire'
   pod 'DynamicJSON'
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'Bond'
   pod 'Alamofire'
   pod 'FieryCrucible'
   

@@ -7,12 +7,20 @@
 //
 
 import Foundation
+import ReactiveKit
+
 class BaseViewModel {
     
     weak var networkService: NetworkService!
     weak var screenRouter: ScreenRouter!
     
+    let disposeBag = DisposeBag()
+    
     func initialize() {
         
+    }
+    
+    deinit {
+        disposeBag.dispose()
     }
 }
