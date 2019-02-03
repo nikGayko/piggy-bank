@@ -7,73 +7,150 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93F991972206F5EA00AA88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991962206F5EA00AA88AF /* AppDelegate.swift */; };
-		93F991992206F5EA00AA88AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991982206F5EA00AA88AF /* ViewController.swift */; };
-		93F9919C2206F5EA00AA88AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F9919A2206F5EA00AA88AF /* Main.storyboard */; };
-		93F9919E2206F5EB00AA88AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F9919D2206F5EB00AA88AF /* Assets.xcassets */; };
-		93F991A12206F5EB00AA88AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F9919F2206F5EB00AA88AF /* LaunchScreen.storyboard */; };
+		42ACAF2B93BAA10B6D92B3B3 /* Pods_piggy_bank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE749E0BC1F4775EA1B3513E /* Pods_piggy_bank.framework */; };
+		93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D722070CF500AA88AF /* AppDelegate.swift */; };
+		93F991DA22070CF500AA88AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D922070CF500AA88AF /* ViewController.swift */; };
+		93F991DD22070CF500AA88AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DB22070CF500AA88AF /* Main.storyboard */; };
+		93F991DF22070CF600AA88AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DE22070CF600AA88AF /* Assets.xcassets */; };
+		93F991E222070CF600AA88AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991E022070CF600AA88AF /* LaunchScreen.storyboard */; };
+		93F991F122070E6400AA88AF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991F022070E6400AA88AF /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		93F991932206F5EA00AA88AF /* piggy-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93F991962206F5EA00AA88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93F991982206F5EA00AA88AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93F9919B2206F5EA00AA88AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		93F9919D2206F5EB00AA88AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93F991A02206F5EB00AA88AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		93F991A22206F5EB00AA88AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A813D44B9075DED53DB9645 /* Pods-piggy-bank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piggy-bank.release.xcconfig"; path = "Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank.release.xcconfig"; sourceTree = "<group>"; };
+		93F991D422070CF500AA88AF /* piggy-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F991D722070CF500AA88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93F991D922070CF500AA88AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93F991DC22070CF500AA88AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93F991DE22070CF600AA88AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93F991E122070CF600AA88AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93F991E322070CF600AA88AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93F991F022070E6400AA88AF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9992ADEBDCFBAAC20C1003CD /* Pods-piggy-bank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piggy-bank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank.debug.xcconfig"; sourceTree = "<group>"; };
+		BE749E0BC1F4775EA1B3513E /* Pods_piggy_bank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_piggy_bank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		93F991902206F5EA00AA88AF /* Frameworks */ = {
+		93F991D122070CF500AA88AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42ACAF2B93BAA10B6D92B3B3 /* Pods_piggy_bank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		93F9918A2206F5EA00AA88AF = {
+		7ED193C69BADC5AF48F478BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				93F991952206F5EA00AA88AF /* piggy-bank */,
-				93F991942206F5EA00AA88AF /* Products */,
+				BE749E0BC1F4775EA1B3513E /* Pods_piggy_bank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93F991CB22070CF500AA88AF = {
+			isa = PBXGroup;
+			children = (
+				93F991D622070CF500AA88AF /* piggy-bank */,
+				93F991D522070CF500AA88AF /* Products */,
+				BD10A500A104A9440934AA2B /* Pods */,
+				7ED193C69BADC5AF48F478BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		93F991942206F5EA00AA88AF /* Products */ = {
+		93F991D522070CF500AA88AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93F991932206F5EA00AA88AF /* piggy-bank.app */,
+				93F991D422070CF500AA88AF /* piggy-bank.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		93F991952206F5EA00AA88AF /* piggy-bank */ = {
+		93F991D622070CF500AA88AF /* piggy-bank */ = {
 			isa = PBXGroup;
 			children = (
-				93F991962206F5EA00AA88AF /* AppDelegate.swift */,
-				93F991982206F5EA00AA88AF /* ViewController.swift */,
-				93F9919A2206F5EA00AA88AF /* Main.storyboard */,
-				93F9919D2206F5EB00AA88AF /* Assets.xcassets */,
-				93F9919F2206F5EB00AA88AF /* LaunchScreen.storyboard */,
-				93F991A22206F5EB00AA88AF /* Info.plist */,
+				93F991EC22070E1E00AA88AF /* ViewModel */,
+				93F991EA22070E0E00AA88AF /* Model */,
+				93F991E922070DFB00AA88AF /* View */,
+				93F991EE22070E2B00AA88AF /* NetworkService */,
+				93F991ED22070E2400AA88AF /* Resources */,
+				93F991D722070CF500AA88AF /* AppDelegate.swift */,
 			);
 			path = "piggy-bank";
+			sourceTree = "<group>";
+		};
+		93F991E922070DFB00AA88AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93F991D922070CF500AA88AF /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93F991EA22070E0E00AA88AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93F991EC22070E1E00AA88AF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93F991ED22070E2400AA88AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93F991EF22070E4700AA88AF /* Storyboards */,
+				93F991DE22070CF600AA88AF /* Assets.xcassets */,
+				93F991E322070CF600AA88AF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		93F991EE22070E2B00AA88AF /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				93F991F022070E6400AA88AF /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		93F991EF22070E4700AA88AF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				93F991DB22070CF500AA88AF /* Main.storyboard */,
+				93F991E022070CF600AA88AF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BD10A500A104A9440934AA2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9992ADEBDCFBAAC20C1003CD /* Pods-piggy-bank.debug.xcconfig */,
+				2A813D44B9075DED53DB9645 /* Pods-piggy-bank.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93F991922206F5EA00AA88AF /* piggy-bank */ = {
+		93F991D322070CF500AA88AF /* piggy-bank */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93F991A52206F5EB00AA88AF /* Build configuration list for PBXNativeTarget "piggy-bank" */;
+			buildConfigurationList = 93F991E622070CF600AA88AF /* Build configuration list for PBXNativeTarget "piggy-bank" */;
 			buildPhases = (
-				93F9918F2206F5EA00AA88AF /* Sources */,
-				93F991902206F5EA00AA88AF /* Frameworks */,
-				93F991912206F5EA00AA88AF /* Resources */,
+				D2B07B433027E12E43EEFD69 /* [CP] Check Pods Manifest.lock */,
+				93F991D022070CF500AA88AF /* Sources */,
+				93F991D122070CF500AA88AF /* Frameworks */,
+				93F991D222070CF500AA88AF /* Resources */,
+				10E0274A03B62540E5AEAF2A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -81,25 +158,25 @@
 			);
 			name = "piggy-bank";
 			productName = "piggy-bank";
-			productReference = 93F991932206F5EA00AA88AF /* piggy-bank.app */;
+			productReference = 93F991D422070CF500AA88AF /* piggy-bank.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		93F9918B2206F5EA00AA88AF /* Project object */ = {
+		93F991CC22070CF500AA88AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Nikita Gayko";
 				TargetAttributes = {
-					93F991922206F5EA00AA88AF = {
+					93F991D322070CF500AA88AF = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 93F9918E2206F5EA00AA88AF /* Build configuration list for PBXProject "piggy-bank" */;
+			buildConfigurationList = 93F991CF22070CF500AA88AF /* Build configuration list for PBXProject "piggy-bank" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +184,110 @@
 				en,
 				Base,
 			);
-			mainGroup = 93F9918A2206F5EA00AA88AF;
-			productRefGroup = 93F991942206F5EA00AA88AF /* Products */;
+			mainGroup = 93F991CB22070CF500AA88AF;
+			productRefGroup = 93F991D522070CF500AA88AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93F991922206F5EA00AA88AF /* piggy-bank */,
+				93F991D322070CF500AA88AF /* piggy-bank */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		93F991912206F5EA00AA88AF /* Resources */ = {
+		93F991D222070CF500AA88AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F991A12206F5EB00AA88AF /* LaunchScreen.storyboard in Resources */,
-				93F9919E2206F5EB00AA88AF /* Assets.xcassets in Resources */,
-				93F9919C2206F5EA00AA88AF /* Main.storyboard in Resources */,
+				93F991E222070CF600AA88AF /* LaunchScreen.storyboard in Resources */,
+				93F991DF22070CF600AA88AF /* Assets.xcassets in Resources */,
+				93F991DD22070CF500AA88AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10E0274A03B62540E5AEAF2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicJSON/DynamicJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2B07B433027E12E43EEFD69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-piggy-bank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		93F9918F2206F5EA00AA88AF /* Sources */ = {
+		93F991D022070CF500AA88AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F991992206F5EA00AA88AF /* ViewController.swift in Sources */,
-				93F991972206F5EA00AA88AF /* AppDelegate.swift in Sources */,
+				93F991DA22070CF500AA88AF /* ViewController.swift in Sources */,
+				93F991F122070E6400AA88AF /* NetworkService.swift in Sources */,
+				93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93F9919A2206F5EA00AA88AF /* Main.storyboard */ = {
+		93F991DB22070CF500AA88AF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				93F9919B2206F5EA00AA88AF /* Base */,
+				93F991DC22070CF500AA88AF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		93F9919F2206F5EB00AA88AF /* LaunchScreen.storyboard */ = {
+		93F991E022070CF600AA88AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				93F991A02206F5EB00AA88AF /* Base */,
+				93F991E122070CF600AA88AF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +295,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		93F991A32206F5EB00AA88AF /* Debug */ = {
+		93F991E422070CF600AA88AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +356,7 @@
 			};
 			name = Debug;
 		};
-		93F991A42206F5EB00AA88AF /* Release */ = {
+		93F991E522070CF600AA88AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,8 +411,9 @@
 			};
 			name = Release;
 		};
-		93F991A62206F5EB00AA88AF /* Debug */ = {
+		93F991E722070CF600AA88AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9992ADEBDCFBAAC20C1003CD /* Pods-piggy-bank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,8 +430,9 @@
 			};
 			name = Debug;
 		};
-		93F991A72206F5EB00AA88AF /* Release */ = {
+		93F991E822070CF600AA88AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A813D44B9075DED53DB9645 /* Pods-piggy-bank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -317,25 +452,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93F9918E2206F5EA00AA88AF /* Build configuration list for PBXProject "piggy-bank" */ = {
+		93F991CF22070CF500AA88AF /* Build configuration list for PBXProject "piggy-bank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93F991A32206F5EB00AA88AF /* Debug */,
-				93F991A42206F5EB00AA88AF /* Release */,
+				93F991E422070CF600AA88AF /* Debug */,
+				93F991E522070CF600AA88AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93F991A52206F5EB00AA88AF /* Build configuration list for PBXNativeTarget "piggy-bank" */ = {
+		93F991E622070CF600AA88AF /* Build configuration list for PBXNativeTarget "piggy-bank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93F991A62206F5EB00AA88AF /* Debug */,
-				93F991A72206F5EB00AA88AF /* Release */,
+				93F991E722070CF600AA88AF /* Debug */,
+				93F991E822070CF600AA88AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 93F9918B2206F5EA00AA88AF /* Project object */;
+	rootObject = 93F991CC22070CF500AA88AF /* Project object */;
 }
