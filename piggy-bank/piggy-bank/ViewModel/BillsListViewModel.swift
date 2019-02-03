@@ -22,7 +22,7 @@ class BillsListViewModel: BaseViewModel {
         super.initialize()
         
         createBill.observeNext { [weak self] in
-            self?.screenRouter.openCreateBill()
+            self?.screenRouter.openComposeBill()
         }.dispose(in: disposeBag)
     }
 }

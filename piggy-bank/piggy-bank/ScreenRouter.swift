@@ -38,12 +38,30 @@ class ScreenRouter {
         return UIApplication.shared.keyWindow
     }
     
-    private func topPresentedVC() -> UIViewController? {
-        return keyWindow()?.rootViewController
+    private func topPresentedVC(_ base: UIViewController? = nil) -> UIViewController? {
+        let mutableBase = base ?? keyWindow()?.rootViewController
+        
+        if let presented = mutableBase?.presentedViewController {
+            return topPresentedVC(presented)
+        }
+        
+        if let navVC = mutableBase as? UINavigationController {
+            return topPresentedVC(navVC.presentedViewController)
+        }
+        
+        return mutableBase
     }
     
     private func topPresentedNavVC() -> UINavigationController? {
         return topPresentedVC() as? UINavigationController
+    }
+    
+    private func embedInNavigation(_ viewController: UIViewController, largeTitle: Bool = true) -> UINavigationController {
+        let navVC = UINavigationController(rootViewController: viewController)
+        navVC.navigationBar.prefersLargeTitles = largeTitle
+        navVC.navigationItem.largeTitleDisplayMode = largeTitle ? .always : .never
+
+        return navVC
     }
 }
 
@@ -60,12 +78,41 @@ extension ScreenRouter {
         show(viewController: billsVC, presentation: .root(window))
     }
     
+    //MARK - Open currencies
     func openComposeBill() {
         guard
-            let composeBillVC: ComposeBillViewController = mainStoryboard.instantiateVC() else {
+            let composeBillVC: InputBillTitleViewController = mainStoryboard.instantiateVC(),
+            let selectCurrencyVC: SelectCurrencyViewController = mainStoryboard.instantiateVC(),
+            let inputAmountVC: InputAmountViewController = mainStoryboard.instantiateVC() else {
             return
         }
         
-        composeBillVC.viewModel = viewModelAssembly.compo
+        let composeBillVM = viewModelAssembly.composeBillVC()
+        
+        composeBillVC.viewModel = composeBillVM
+        selectCurrencyVC.viewModel = composeBillVM
+        inputAmountVC.viewModel = composeBillVM
+        
+        let pageContainerVC = PageContainerViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        pageContainerVC.controllers = [composeBillVC, selectCurrencyVC, inputAmountVC]
+        
+        show(viewController: pageContainerVC, presentation: .modal)
+    }
+    
+    func scrollToSelectCurrency() {
+        (topPresentedVC() as? PageContainerViewController)?.openNext()
+    }
+    
+    func scrollToInputAmount() {
+        (topPresentedVC() as? PageContainerViewController)?.openNext()
+    }
+    
+    func closeComposeBill() {
+        guard
+            let topVC = topPresentedVC() as? PageContainerViewController else {
+                return
+        }
+        
+        topVC.dismiss(animated: true, completion: nil)
     }
 }
