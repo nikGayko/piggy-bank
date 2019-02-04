@@ -24,8 +24,4 @@ class BillTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-
-    func configureCell(with bill: Bill) {
-        
-    }
 }

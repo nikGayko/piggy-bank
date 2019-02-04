@@ -12,9 +12,13 @@ import FieryCrucible
 class ModelAssembly: DependencyFactory {
     
     func networkService() -> NetworkService {
-        return shared(NetworkService())
+        return shared(NetworkService()) { instance in
+            instance.coreDataManager = self.coreDataManager()
+        }
     }
     
-    
+    func coreDataManager() -> CoreDataManager {
+        return shared(CoreDataManager())
+    }
     
 }

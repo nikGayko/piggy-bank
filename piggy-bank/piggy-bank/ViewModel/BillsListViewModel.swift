@@ -12,7 +12,7 @@ import ReactiveKit
 
 class BillsListViewModel: BaseViewModel {
     
-    let dataSource = MutableObservableArray2D<String, Bill>()
+    let dataSource = MutableObservableArray2D<String, Void>()
     
     let isSourceEmpty = Observable<Bool>(true)
     
@@ -20,6 +20,8 @@ class BillsListViewModel: BaseViewModel {
     
     override func initialize() {
         super.initialize()
+        
+        networkService.fetchCountries().observeNext(with: { _ in })
         
         createBill.observeNext { [weak self] in
             self?.screenRouter.openComposeBill()

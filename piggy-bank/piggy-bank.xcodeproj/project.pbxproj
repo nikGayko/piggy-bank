@@ -16,7 +16,6 @@
 		93C1FEC022071C4700646A92 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEBF22071C4700646A92 /* ApplicationAssembly.swift */; };
 		93C1FEC2220722B800646A92 /* BillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FEC1220722B800646A92 /* BillTableViewCell.xib */; };
 		93C1FEC4220722E700646A92 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEC3220722E700646A92 /* BillTableViewCell.swift */; };
-		93C1FEC6220726AC00646A92 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEC5220726AC00646A92 /* Bill.swift */; };
 		93C1FEC92207275A00646A92 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEC82207275A00646A92 /* RoundedViews.swift */; };
 		93C1FECC2207292A00646A92 /* CTC Splash Rounded-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FECA2207292A00646A92 /* CTC Splash Rounded-bold.otf */; };
 		93C1FECD2207292A00646A92 /* CTC Splash Rounded-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FECB2207292A00646A92 /* CTC Splash Rounded-regular.otf */; };
@@ -30,8 +29,11 @@
 		93C1FEE12207951A00646A92 /* InputAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE02207951A00646A92 /* InputAmountViewController.swift */; };
 		93C1FEE32207952F00646A92 /* ComposeBillPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE22207952F00646A92 /* ComposeBillPageViewController.swift */; };
 		93C1FEE522079E2B00646A92 /* UISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE422079E2B00646A92 /* UISearchBar+Extensions.swift */; };
-		93C1FEE722079FC100646A92 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE622079FC100646A92 /* Currency.swift */; };
 		93C1FEE92207A15F00646A92 /* UIFont+standard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE82207A15F00646A92 /* UIFont+standard.swift */; };
+		93C1FEEB2208C7A400646A92 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEEA2208C7A400646A92 /* NetworkError.swift */; };
+		93C1FEED2208CD9400646A92 /* NetworkService+Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEEC2208CD9400646A92 /* NetworkService+Country.swift */; };
+		93C1FEF02208D12D00646A92 /* PiggyBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEEE2208D12D00646A92 /* PiggyBank.xcdatamodeld */; };
+		93C1FEF22208D24600646A92 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEF12208D24600646A92 /* CoreDataManager.swift */; };
 		93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D722070CF500AA88AF /* AppDelegate.swift */; };
 		93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D922070CF500AA88AF /* BillsListViewController.swift */; };
 		93F991DD22070CF500AA88AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DB22070CF500AA88AF /* Main.storyboard */; };
@@ -50,7 +52,6 @@
 		93C1FEBF22071C4700646A92 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
 		93C1FEC1220722B800646A92 /* BillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillTableViewCell.xib; sourceTree = "<group>"; };
 		93C1FEC3220722E700646A92 /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
-		93C1FEC5220726AC00646A92 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		93C1FEC82207275A00646A92 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 		93C1FECA2207292A00646A92 /* CTC Splash Rounded-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CTC Splash Rounded-bold.otf"; sourceTree = "<group>"; };
 		93C1FECB2207292A00646A92 /* CTC Splash Rounded-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CTC Splash Rounded-regular.otf"; sourceTree = "<group>"; };
@@ -64,8 +65,11 @@
 		93C1FEE02207951A00646A92 /* InputAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAmountViewController.swift; sourceTree = "<group>"; };
 		93C1FEE22207952F00646A92 /* ComposeBillPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeBillPageViewController.swift; sourceTree = "<group>"; };
 		93C1FEE422079E2B00646A92 /* UISearchBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extensions.swift"; sourceTree = "<group>"; };
-		93C1FEE622079FC100646A92 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		93C1FEE82207A15F00646A92 /* UIFont+standard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+standard.swift"; sourceTree = "<group>"; };
+		93C1FEEA2208C7A400646A92 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		93C1FEEC2208CD9400646A92 /* NetworkService+Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Country.swift"; sourceTree = "<group>"; };
+		93C1FEEF2208D12D00646A92 /* PiggyBank.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PiggyBank.xcdatamodel; sourceTree = "<group>"; };
+		93C1FEF12208D24600646A92 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		93F991D422070CF500AA88AF /* piggy-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F991D722070CF500AA88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F991D922070CF500AA88AF /* BillsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewController.swift; sourceTree = "<group>"; };
@@ -189,8 +193,8 @@
 		93F991EA22070E0E00AA88AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				93C1FEC5220726AC00646A92 /* Bill.swift */,
-				93C1FEE622079FC100646A92 /* Currency.swift */,
+				93C1FEEE2208D12D00646A92 /* PiggyBank.xcdatamodeld */,
+				93C1FEF12208D24600646A92 /* CoreDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				93F991F022070E6400AA88AF /* NetworkService.swift */,
+				93C1FEEA2208C7A400646A92 /* NetworkError.swift */,
+				93C1FEEC2208CD9400646A92 /* NetworkService+Country.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -379,25 +385,27 @@
 				93C1FEE12207951A00646A92 /* InputAmountViewController.swift in Sources */,
 				93C1FEC92207275A00646A92 /* RoundedViews.swift in Sources */,
 				93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */,
-				93C1FEC6220726AC00646A92 /* Bill.swift in Sources */,
 				93F991F122070E6400AA88AF /* NetworkService.swift in Sources */,
 				93C1FED222072B7700646A92 /* UIStoryboard+instantiateVC.swift in Sources */,
+				93C1FEF22208D24600646A92 /* CoreDataManager.swift in Sources */,
 				93C1FED6220733BE00646A92 /* View+Extensions.swift in Sources */,
 				93C1FEDC2207896200646A92 /* EdgedTextField.swift in Sources */,
 				93C1FED422072D8700646A92 /* ReusableView.swift in Sources */,
+				93C1FEF02208D12D00646A92 /* PiggyBank.xcdatamodeld in Sources */,
 				93C1FEE92207A15F00646A92 /* UIFont+standard.swift in Sources */,
 				93C1FEBC220713AA00646A92 /* ViewModelAssembly.swift in Sources */,
 				93C1FEE32207952F00646A92 /* ComposeBillPageViewController.swift in Sources */,
 				93C1FEB5220710B700646A92 /* ScreenRouter.swift in Sources */,
 				93C1FED8220782A700646A92 /* InputBillTitleViewController.swift in Sources */,
 				93C1FEC4220722E700646A92 /* BillTableViewCell.swift in Sources */,
-				93C1FEE722079FC100646A92 /* Currency.swift in Sources */,
 				93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */,
 				93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */,
 				93C1FEDF2207950E00646A92 /* SelectCurrencyViewController.swift in Sources */,
+				93C1FEEB2208C7A400646A92 /* NetworkError.swift in Sources */,
 				93C1FEB92207130900646A92 /* BaseViewModel.swift in Sources */,
 				93C1FEC022071C4700646A92 /* ApplicationAssembly.swift in Sources */,
 				93C1FEE522079E2B00646A92 /* UISearchBar+Extensions.swift in Sources */,
+				93C1FEED2208CD9400646A92 /* NetworkService+Country.swift in Sources */,
 				93C1FEDA220782CB00646A92 /* ComposeBillViewModel.swift in Sources */,
 				93C1FEBE22071B7400646A92 /* ModelAssembly.swift in Sources */,
 			);
@@ -556,7 +564,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gayko.nikita.piggy-bank";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -575,7 +583,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gayko.nikita.piggy-bank";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -601,6 +609,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93C1FEEE2208D12D00646A92 /* PiggyBank.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93C1FEEF2208D12D00646A92 /* PiggyBank.xcdatamodel */,
+			);
+			currentVersion = 93C1FEEF2208D12D00646A92 /* PiggyBank.xcdatamodel */;
+			path = PiggyBank.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 93F991CC22070CF500AA88AF /* Project object */;
 }
