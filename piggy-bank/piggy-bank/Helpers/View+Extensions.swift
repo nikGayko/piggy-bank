@@ -34,4 +34,10 @@ extension UIView {
             layer.borderColor = newValue?.cgColor
         }
     }
+    
+    @IBInspectable
+    var maskToBounds: Bool {
+        get { return layer.masksToBounds }
+        set { layer.masksToBounds = newValue }
+    }
 }

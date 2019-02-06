@@ -116,3 +116,26 @@ extension ScreenRouter {
         topVC.dismiss(animated: true, completion: nil)
     }
 }
+
+extension ScreenRouter {
+    func showInfoAlert(title: String, message: String) {
+        showAlert(title: title, message: message, actions: [AlertAction(title: "ОК", handler: nil)])
+    }
+    
+    fileprivate func showAlert(title: String?, message: String?, actions: [AlertAction]) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        for action in actions {
+            let action = UIAlertAction(title: action.title, style: action.style, handler: { _ in action.handler?() })
+            alertVC.addAction(action)
+        }
+        
+        topPresentedVC()?.present(alertVC, animated: true, completion: nil)
+    }
+}
+
+fileprivate struct AlertAction {
+    let title: String
+    let handler: (()->())?
+    let style: UIAlertAction.Style = .default
+}

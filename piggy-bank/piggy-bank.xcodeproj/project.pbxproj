@@ -34,6 +34,9 @@
 		93C1FEED2208CD9400646A92 /* NetworkService+Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEEC2208CD9400646A92 /* NetworkService+Country.swift */; };
 		93C1FEF02208D12D00646A92 /* PiggyBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEEE2208D12D00646A92 /* PiggyBank.xcdatamodeld */; };
 		93C1FEF22208D24600646A92 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEF12208D24600646A92 /* CoreDataManager.swift */; };
+		93C1FEF7220A200400646A92 /* CurrencyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FEF6220A200400646A92 /* CurrencyCollectionViewCell.xib */; };
+		93C1FEF9220A210100646A92 /* CurrencyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */; };
+		93C1FEFB220B618400646A92 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEFA220B618400646A92 /* Currency.swift */; };
 		93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D722070CF500AA88AF /* AppDelegate.swift */; };
 		93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D922070CF500AA88AF /* BillsListViewController.swift */; };
 		93F991DD22070CF500AA88AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DB22070CF500AA88AF /* Main.storyboard */; };
@@ -70,6 +73,9 @@
 		93C1FEEC2208CD9400646A92 /* NetworkService+Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Country.swift"; sourceTree = "<group>"; };
 		93C1FEEF2208D12D00646A92 /* PiggyBank.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PiggyBank.xcdatamodel; sourceTree = "<group>"; };
 		93C1FEF12208D24600646A92 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		93C1FEF6220A200400646A92 /* CurrencyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyCollectionViewCell.xib; sourceTree = "<group>"; };
+		93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCollectionViewCell.swift; sourceTree = "<group>"; };
+		93C1FEFA220B618400646A92 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		93F991D422070CF500AA88AF /* piggy-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F991D722070CF500AA88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F991D922070CF500AA88AF /* BillsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +152,15 @@
 			path = ComposeBill;
 			sourceTree = "<group>";
 		};
+		93C1FEF5220A1FE800646A92 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				93C1FEC1220722B800646A92 /* BillTableViewCell.xib */,
+				93C1FEF6220A200400646A92 /* CurrencyCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		93F991CB22070CF500AA88AF = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +201,7 @@
 				93F991D922070CF500AA88AF /* BillsListViewController.swift */,
 				93C1FEC3220722E700646A92 /* BillTableViewCell.swift */,
 				93C1FEDD220794B100646A92 /* ComposeBill */,
+				93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +211,7 @@
 			children = (
 				93C1FEEE2208D12D00646A92 /* PiggyBank.xcdatamodeld */,
 				93C1FEF12208D24600646A92 /* CoreDataManager.swift */,
+				93C1FEFA220B618400646A92 /* Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,7 +231,7 @@
 			children = (
 				93C1FECE2207292F00646A92 /* Fonts */,
 				93F991EF22070E4700AA88AF /* Storyboards */,
-				93C1FEC1220722B800646A92 /* BillTableViewCell.xib */,
+				93C1FEF5220A1FE800646A92 /* Cells */,
 				93F991DE22070CF600AA88AF /* Assets.xcassets */,
 				93F991E322070CF600AA88AF /* Info.plist */,
 			);
@@ -315,6 +332,7 @@
 				93F991DF22070CF600AA88AF /* Assets.xcassets in Resources */,
 				93C1FECD2207292A00646A92 /* CTC Splash Rounded-regular.otf in Resources */,
 				93F991DD22070CF500AA88AF /* Main.storyboard in Resources */,
+				93C1FEF7220A200400646A92 /* CurrencyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,9 +412,11 @@
 				93C1FEF02208D12D00646A92 /* PiggyBank.xcdatamodeld in Sources */,
 				93C1FEE92207A15F00646A92 /* UIFont+standard.swift in Sources */,
 				93C1FEBC220713AA00646A92 /* ViewModelAssembly.swift in Sources */,
+				93C1FEFB220B618400646A92 /* Currency.swift in Sources */,
 				93C1FEE32207952F00646A92 /* ComposeBillPageViewController.swift in Sources */,
 				93C1FEB5220710B700646A92 /* ScreenRouter.swift in Sources */,
 				93C1FED8220782A700646A92 /* InputBillTitleViewController.swift in Sources */,
+				93C1FEF9220A210100646A92 /* CurrencyCollectionViewCell.swift in Sources */,
 				93C1FEC4220722E700646A92 /* BillTableViewCell.swift in Sources */,
 				93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */,
 				93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */,

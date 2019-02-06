@@ -11,6 +11,7 @@ import ReactiveKit
 
 class BaseViewModel {
     
+    weak var coreDataManager: CoreDataManager!
     weak var networkService: NetworkService!
     weak var screenRouter: ScreenRouter!
     

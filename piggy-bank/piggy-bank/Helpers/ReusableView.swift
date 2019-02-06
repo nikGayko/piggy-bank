@@ -13,5 +13,21 @@ extension UITableView {
         let identifier = String(describing: cellType)
         self.register(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier)
     }
+}
+
+extension UICollectionView {
+    func registerCell<Cell: UICollectionViewCell>(_ cellType: Cell.Type) {
+        let identifier = String(describing: cellType)
+        self.register(UINib(nibName: identifier, bundle: nil), forCellWithReuseIdentifier: identifier)
+    }
     
+    func dequeueCell<Cell: UICollectionViewCell>(for indexPath: IndexPath) -> Cell {
+        let identifier = String(describing: Cell.self)
+        let cell = self.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        if let subCell = cell as? Cell {
+            return subCell
+        } else {
+            fatalError("Couldn't cast to custom cell")
+        }
+    }
 }

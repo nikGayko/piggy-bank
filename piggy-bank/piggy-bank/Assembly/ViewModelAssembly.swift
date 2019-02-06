@@ -33,6 +33,7 @@ class ViewModelAssembly: DependencyFactory {
     
     private func setupPropertiesAndInit(_ viewModel: BaseViewModel) {
         viewModel.networkService = modelAssembly.networkService()
+        viewModel.coreDataManager = modelAssembly.coreDataManager()
         viewModel.screenRouter = screenRouter
         viewModel.initialize()
     }

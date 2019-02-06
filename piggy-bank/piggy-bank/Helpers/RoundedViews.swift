@@ -10,8 +10,15 @@ import UIKit
 
 class RoundedImageView: UIImageView {
     
-    override func draw(_ rect: CGRect) {
-        let minEdge = min(rect.width, rect.height)
+    override var clipsToBounds: Bool {
+        get { return true }
+        set { }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let minEdge = min(bounds.width, bounds.height)
         layer.cornerRadius = minEdge/2
     }
 }

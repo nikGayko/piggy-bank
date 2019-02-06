@@ -20,9 +20,7 @@ class BillsListViewModel: BaseViewModel {
     
     override func initialize() {
         super.initialize()
-        
-        networkService.fetchCountries().observeNext(with: { _ in })
-        
+                
         createBill.observeNext { [weak self] in
             self?.screenRouter.openComposeBill()
         }.dispose(in: disposeBag)

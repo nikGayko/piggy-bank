@@ -37,3 +37,19 @@ class CoreDataManager {
     }
     
 }
+
+extension CoreDataManager {
+    func addBill(title: String, currency: Currency, amount: Double) {
+        let bill = Bill(context: context)
+        bill.title = title
+        bill.currency = currency.code
+        
+        let billNote = BillNote(context: context)
+        billNote.amount = amount
+        billNote.date = Date()
+        bill.addToBillNotes(billNote)
+        
+        bill.addToBillNotes(billNote)
+        saveContext()
+    }
+}

@@ -96,7 +96,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomEdge" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -157,10 +157,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-I8-b96">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="192.5"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="228.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теперь валюта" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-C7-WtK">
-                                        <rect key="frame" x="40" y="147.5" width="243" height="35"/>
+                                        <rect key="frame" x="40" y="173.5" width="243" height="35"/>
                                         <fontDescription key="fontDescription" name="CTCSplashRounded-Bold" family="CTC Splash Rounded" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -168,31 +168,25 @@
                                 </subviews>
                                 <color key="backgroundColor" name="main-theme-color"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="2Ar-C7-WtK" secondAttribute="bottom" constant="10" id="1FL-UB-84t"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Ar-C7-WtK" secondAttribute="bottom" constant="20" id="1FL-UB-84t"/>
+                                    <constraint firstItem="2Ar-C7-WtK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cxI-I8-b96" secondAttribute="top" constant="20" id="HP9-q9-eD4"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Ar-C7-WtK" secondAttribute="trailing" constant="20" id="dOU-lg-4Cd"/>
                                     <constraint firstItem="2Ar-C7-WtK" firstAttribute="leading" secondItem="cxI-I8-b96" secondAttribute="leading" constant="40" id="wB1-0h-LhP"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Страна, валюта" translatesAutoresizingMaskIntoConstraints="NO" id="LDf-sA-Ued">
-                                <rect key="frame" x="0.0" y="193" width="375" height="56"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvX-pb-ycp" userLabel="Status bar background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                 <color key="backgroundColor" name="main-theme-color"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" name="main-theme-color"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="2St-6R-w6j" id="Ar9-uF-9cp"/>
-                                </connections>
-                            </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P3V-8k-QX2">
-                                <rect key="frame" x="0.0" y="248.5" width="375" height="418.5"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P3V-8k-QX2">
+                                <rect key="frame" x="10" y="248.5" width="355" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lzi-ja-xo0">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="FX5-Jp-jIz"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lzi-ja-xo0">
+                                    <size key="itemSize" width="74" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -205,23 +199,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LDf-sA-Ued" firstAttribute="top" secondItem="cxI-I8-b96" secondAttribute="bottom" id="039-gQ-ysx"/>
-                            <constraint firstItem="cxI-I8-b96" firstAttribute="top" secondItem="Zvb-3Y-8lA" secondAttribute="top" id="9dU-A7-Zym"/>
-                            <constraint firstItem="LDf-sA-Ued" firstAttribute="leading" secondItem="YzF-qL-9MB" secondAttribute="leading" id="HK0-Ro-gfy"/>
-                            <constraint firstItem="P3V-8k-QX2" firstAttribute="top" secondItem="LDf-sA-Ued" secondAttribute="bottom" id="HgA-Fs-T4H"/>
-                            <constraint firstItem="P3V-8k-QX2" firstAttribute="leading" secondItem="YzF-qL-9MB" secondAttribute="leading" id="Nfy-7Z-MIN"/>
+                            <constraint firstItem="cxI-I8-b96" firstAttribute="top" secondItem="YzF-qL-9MB" secondAttribute="top" id="9dU-A7-Zym"/>
+                            <constraint firstAttribute="trailing" secondItem="UvX-pb-ycp" secondAttribute="trailing" id="FNk-Xh-UeJ"/>
+                            <constraint firstItem="P3V-8k-QX2" firstAttribute="leading" secondItem="YzF-qL-9MB" secondAttribute="leading" constant="10" id="Nfy-7Z-MIN"/>
                             <constraint firstItem="cxI-I8-b96" firstAttribute="leading" secondItem="YzF-qL-9MB" secondAttribute="leading" id="PZa-l4-Fei"/>
-                            <constraint firstItem="YzF-qL-9MB" firstAttribute="bottom" secondItem="P3V-8k-QX2" secondAttribute="bottom" id="cbR-23-CG2"/>
-                            <constraint firstItem="YzF-qL-9MB" firstAttribute="centerY" secondItem="LDf-sA-Ued" secondAttribute="bottom" constant="95" id="fUF-PJ-xLg"/>
+                            <constraint firstItem="UvX-pb-ycp" firstAttribute="leading" secondItem="Zvb-3Y-8lA" secondAttribute="leading" id="epR-KS-4yS"/>
+                            <constraint firstItem="UvX-pb-ycp" firstAttribute="top" secondItem="Zvb-3Y-8lA" secondAttribute="top" id="gsb-Qc-MYu"/>
                             <constraint firstItem="YzF-qL-9MB" firstAttribute="trailing" secondItem="cxI-I8-b96" secondAttribute="trailing" id="iTU-c9-MJv"/>
-                            <constraint firstItem="YzF-qL-9MB" firstAttribute="trailing" secondItem="P3V-8k-QX2" secondAttribute="trailing" id="lXM-dT-pJv"/>
-                            <constraint firstItem="LDf-sA-Ued" firstAttribute="trailing" secondItem="YzF-qL-9MB" secondAttribute="trailing" id="yYa-IG-LXA"/>
+                            <constraint firstItem="YzF-qL-9MB" firstAttribute="centerY" secondItem="cxI-I8-b96" secondAttribute="bottom" constant="95" id="j9q-Kf-yr8"/>
+                            <constraint firstItem="YzF-qL-9MB" firstAttribute="trailing" secondItem="P3V-8k-QX2" secondAttribute="trailing" constant="10" id="lXM-dT-pJv"/>
+                            <constraint firstItem="P3V-8k-QX2" firstAttribute="top" secondItem="cxI-I8-b96" secondAttribute="bottom" id="p4g-AL-Agd"/>
+                            <constraint firstItem="YzF-qL-9MB" firstAttribute="top" secondItem="UvX-pb-ycp" secondAttribute="bottom" id="ygd-a3-xTC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YzF-qL-9MB"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="P3V-8k-QX2" id="sPn-Zy-v4B"/>
-                        <outlet property="searchBar" destination="LDf-sA-Ued" id="Ag0-D5-0qx"/>
+                        <outlet property="collectionView" destination="P3V-8k-QX2" id="JSr-uO-pEG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUH-7G-Gau" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,7 +236,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomEdge" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">

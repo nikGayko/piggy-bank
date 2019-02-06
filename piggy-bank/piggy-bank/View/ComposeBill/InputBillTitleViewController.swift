@@ -20,6 +20,8 @@ class InputBillTitleViewController: UIViewController {
         billTitleTextField.reactive.controlEvents(.editingDidEndOnExit).observeNext { [weak self] in
             self?.viewModel.pickCurrency.next()
             }.dispose(in: reactive.bag)
+        
+        viewModel.title.bidirectionalBind(to: billTitleTextField.reactive.text).dispose(in: reactive.bag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
