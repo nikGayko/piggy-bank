@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CTC Splash Rounded-bold.otf">
+            <string>CTCSplashRounded-Bold</string>
+        </array>
+        <array key="CTC Splash Rounded-regular.otf">
+            <string>CTCSplashRounded</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Input Group Title View Controller-->
+        <scene sceneID="tDf-ZU-6eo">
+            <objects>
+                <viewController storyboardIdentifier="InputGroupTitleViewController" id="l1V-US-a8N" customClass="InputGroupTitleViewController" customModule="piggy_bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ijm-VC-73i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="прим. &quot;Мои счета&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jei-hs-s0Y" customClass="EdgedTextField" customModule="piggy_bank" customModuleProvider="target">
+                                <rect key="frame" x="20" y="278.5" width="335" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="YeK-kC-XhX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="edgeWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="5u4-62-JTx">
+                                <rect key="frame" x="0.0" y="208.5" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1dr-Sj-cf7"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pb2-g7-cSg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="208.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название группы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3k-oH-k66">
+                                        <rect key="frame" x="40" y="158.5" width="280.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="CTCSplashRounded-Bold" family="CTC Splash Rounded" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="main-theme-color"/>
+                                <constraints>
+                                    <constraint firstItem="U3k-oH-k66" firstAttribute="leading" secondItem="Pb2-g7-cSg" secondAttribute="leading" constant="40" id="QjJ-34-DZw"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U3k-oH-k66" secondAttribute="trailing" constant="20" id="eJW-GN-tGy"/>
+                                    <constraint firstAttribute="bottom" secondItem="U3k-oH-k66" secondAttribute="bottom" constant="15" id="zNb-Qe-H05"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pb2-g7-cSg" firstAttribute="top" secondItem="Ijm-VC-73i" secondAttribute="top" id="L0V-YK-TD8"/>
+                            <constraint firstItem="Jei-hs-s0Y" firstAttribute="top" secondItem="5u4-62-JTx" secondAttribute="bottom" constant="30" id="Lt2-c7-pve"/>
+                            <constraint firstItem="JDz-JS-c04" firstAttribute="trailing" secondItem="Jei-hs-s0Y" secondAttribute="trailing" constant="20" id="S3D-Ob-m6x"/>
+                            <constraint firstItem="5u4-62-JTx" firstAttribute="top" secondItem="Pb2-g7-cSg" secondAttribute="bottom" id="SNE-bA-h1H"/>
+                            <constraint firstItem="Pb2-g7-cSg" firstAttribute="leading" secondItem="JDz-JS-c04" secondAttribute="leading" id="fTD-76-Uui"/>
+                            <constraint firstItem="Jei-hs-s0Y" firstAttribute="leading" secondItem="JDz-JS-c04" secondAttribute="leading" constant="20" id="i5m-Hy-ZRa"/>
+                            <constraint firstItem="5u4-62-JTx" firstAttribute="leading" secondItem="JDz-JS-c04" secondAttribute="leading" id="im9-Ub-our"/>
+                            <constraint firstItem="JDz-JS-c04" firstAttribute="trailing" secondItem="Pb2-g7-cSg" secondAttribute="trailing" id="rkC-l0-Bx1"/>
+                            <constraint firstItem="Jei-hs-s0Y" firstAttribute="bottom" secondItem="JDz-JS-c04" secondAttribute="centerY" constant="-15" id="vxn-Rx-s0p"/>
+                            <constraint firstAttribute="trailing" secondItem="5u4-62-JTx" secondAttribute="trailing" id="yUJ-g1-xOF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JDz-JS-c04"/>
+                    </view>
+                    <connections>
+                        <outlet property="groupTextField" destination="Jei-hs-s0Y" id="k7n-HG-PhW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSF-HO-M6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="27"/>
+        </scene>
+        <!--Select Bill View Controller-->
+        <scene sceneID="K87-f8-oYL">
+            <objects>
+                <viewController storyboardIdentifier="SelectBillViewController" id="lic-gI-gu5" customClass="SelectBillViewController" customModule="piggy_bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G7L-Ry-eO8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="For-pP-uWV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="168.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какие счета добавим в группу?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cp2-92-aSG">
+                                        <rect key="frame" x="40" y="68.5" width="304" height="70"/>
+                                        <fontDescription key="fontDescription" name="CTCSplashRounded-Bold" family="CTC Splash Rounded" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="main-theme-color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cp2-92-aSG" secondAttribute="trailing" constant="20" id="6As-e8-mwI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cp2-92-aSG" secondAttribute="bottom" constant="30" id="H8r-bp-G1I"/>
+                                    <constraint firstItem="Cp2-92-aSG" firstAttribute="leading" secondItem="For-pP-uWV" secondAttribute="leading" constant="40" id="rdh-39-QGY"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t8l-xD-2NW">
+                                <rect key="frame" x="0.0" y="168.5" width="375" height="408.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lic-gI-gu5" id="tYM-1C-mk5"/>
+                                    <outlet property="delegate" destination="lic-gI-gu5" id="Egf-hT-aQQ"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="KXg-Cs-IfQ">
+                                <rect key="frame" x="0.0" y="168.5" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dGj-rZ-ZsU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgP-el-G9y">
+                                <rect key="frame" x="87" y="587" width="201" height="50"/>
+                                <color key="backgroundColor" name="main-theme-color"/>
+                                <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="15" maxX="50" maxY="15"/>
+                                <state key="normal" title="Завершить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t8l-xD-2NW" firstAttribute="leading" secondItem="6jJ-Ii-hmW" secondAttribute="leading" id="5a6-wC-NBY"/>
+                            <constraint firstItem="t8l-xD-2NW" firstAttribute="top" secondItem="For-pP-uWV" secondAttribute="bottom" id="7he-Ro-q0Q"/>
+                            <constraint firstItem="For-pP-uWV" firstAttribute="leading" secondItem="6jJ-Ii-hmW" secondAttribute="leading" id="Clv-X9-KtQ"/>
+                            <constraint firstItem="6jJ-Ii-hmW" firstAttribute="trailing" secondItem="t8l-xD-2NW" secondAttribute="trailing" id="QGH-EJ-lWh"/>
+                            <constraint firstItem="6jJ-Ii-hmW" firstAttribute="centerY" secondItem="For-pP-uWV" secondAttribute="bottom" constant="175" id="Uor-3n-Rq9"/>
+                            <constraint firstItem="For-pP-uWV" firstAttribute="top" secondItem="G7L-Ry-eO8" secondAttribute="top" id="Zkv-hn-zqy"/>
+                            <constraint firstItem="XgP-el-G9y" firstAttribute="top" secondItem="t8l-xD-2NW" secondAttribute="bottom" constant="10" id="axu-5J-JMQ"/>
+                            <constraint firstItem="KXg-Cs-IfQ" firstAttribute="top" secondItem="For-pP-uWV" secondAttribute="bottom" id="dRO-hp-e3n"/>
+                            <constraint firstItem="XgP-el-G9y" firstAttribute="centerX" secondItem="6jJ-Ii-hmW" secondAttribute="centerX" id="ikE-fh-jLw"/>
+                            <constraint firstItem="KXg-Cs-IfQ" firstAttribute="leading" secondItem="6jJ-Ii-hmW" secondAttribute="leading" id="lpd-uy-0Ic"/>
+                            <constraint firstItem="6jJ-Ii-hmW" firstAttribute="trailing" secondItem="KXg-Cs-IfQ" secondAttribute="trailing" id="rw7-Dz-8Eq"/>
+                            <constraint firstItem="6jJ-Ii-hmW" firstAttribute="bottom" secondItem="XgP-el-G9y" secondAttribute="bottom" constant="30" id="vic-Ji-WMr"/>
+                            <constraint firstItem="For-pP-uWV" firstAttribute="trailing" secondItem="6jJ-Ii-hmW" secondAttribute="trailing" id="zCB-Eo-T7l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6jJ-Ii-hmW"/>
+                    </view>
+                    <connections>
+                        <outlet property="billsTableView" destination="t8l-xD-2NW" id="25B-Il-sMX"/>
+                        <outlet property="completeButton" destination="XgP-el-G9y" id="iwd-eN-Gld"/>
+                        <outlet property="titleContainerView" destination="For-pP-uWV" id="pcj-2C-eI0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRi-CX-spf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736.8" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="triangle" width="428" height="401"/>
+        <namedColor name="main-theme-color">
+            <color red="1" green="0.78823529411764703" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

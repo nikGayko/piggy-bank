@@ -19,6 +19,12 @@ class ViewModelAssembly: DependencyFactory {
         self.screenRouter = screenRouter
     }
     
+    func tabViewModel() -> TabViewModel {
+        return scoped(TabViewModel(), configure: { instance in
+            self.setupPropertiesAndInit(instance)
+        })
+    }
+    
     func billsList() -> BillsListViewModel {
         return scoped(BillsListViewModel(), configure: { (instance) in
             self.setupPropertiesAndInit(instance)
@@ -27,6 +33,12 @@ class ViewModelAssembly: DependencyFactory {
     
     func composeBillVC() -> ComposeBillViewModel {
         return scoped(ComposeBillViewModel(), configure: { (instance) in
+            self.setupPropertiesAndInit(instance)
+        })
+    }
+    
+    func groupVM() -> GroupViewModel {
+        return scoped(GroupViewModel(), configure: { (instance) in
             self.setupPropertiesAndInit(instance)
         })
     }

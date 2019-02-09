@@ -12,6 +12,7 @@ import CoreData
 class SelectCurrencyViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var continueButton: UIButton!
     
     var viewModel: ComposeBillViewModel!
     
@@ -28,21 +29,26 @@ class SelectCurrencyViewController: UIViewController {
             cell.configure(currencies[indexPath.row])
             return cell
         }
+        
+        viewModel.isCurrencyContinueEnabled
+            .bind(to: continueButton.reactive.isEnabled)
+            .dispose(in: reactive.bag)
+        
+        continueButton.reactive.tap.bind(to: viewModel.inputAmount).dispose(in: reactive.bag)
     }
 }
 
 extension SelectCurrencyViewController: UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        let cell: CurrencyCollectionViewCell = collectionView.dequeueCell(for: indexPath)
-        cell.isHighlighted = true
-        return true
-    }
     
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        let cell: CurrencyCollectionViewCell = collectionView.dequeueCell(for: indexPath)
-        cell.isHighlighted = false
-    }
+//    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        let cell: CurrencyCollectionViewCell = collectionView.dequeueCell(for: indexPath)
+//        debugPrint("Will remove \(indexPath)")
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        let cell: CurrencyCollectionViewCell = collectionView.dequeueCell(for: indexPath)
+//        debugPrint("Will display \(indexPath)")
+//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectCurrency.next(indexPath)

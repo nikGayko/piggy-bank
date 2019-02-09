@@ -11,14 +11,17 @@ import UIKit
 class InputAmountViewController: UIViewController {
     
     @IBOutlet weak var inputAmountTextField: EdgedTextField!
+    @IBOutlet weak var completeButton: UIButton!
+    @IBOutlet weak var completeButtonBottomConstraint: NSLayoutConstraint!
     
     var viewModel: ComposeBillViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        inputAmountTextField.reactive.controlEvents(.editingDidEndOnExit).observeNext { [weak self] in
-            self?.viewModel.completeComposing.next()
+        completeButton.reactive.tap.observeNext { [weak self] in
+            self?.inputAmountTextField.endEditing(true)
+            self?.viewModel.assignGroup.next()
         }.dispose(in: reactive.bag)
         
         viewModel.amount.bidirectionalMap(to: { (double) -> String? in
@@ -34,12 +37,31 @@ class InputAmountViewController: UIViewController {
                 return nil
             }
         }.bidirectionalBind(to: inputAmountTextField.reactive.text).dispose(in: reactive.bag)
+        
+        NotificationCenter.default.reactive
+            .notification(name: UIResponder.keyboardWillShowNotification)
+            .map { notificatoin -> CGFloat? in
+                let frame = notificatoin.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
+                return frame?.cgRectValue.height
+            }
+            .ignoreNil()
+            .observeNext {[weak self] (height) in
+                self?.completeButtonBottomConstraint.constant += height
+                UIView.animate(withDuration: 0.3, animations: {
+                    self?.view.layoutSubviews()
+                })
+            }
+            .dispose(in: reactive.bag)
+        
+        viewModel.isAmountCompleteEnabled.bind(to: completeButton.reactive.isEnabled).dispose(in: reactive.bag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        inputAmountTextField.becomeFirstResponder()
+        DispatchQueue.main.async {
+            self.inputAmountTextField.becomeFirstResponder()
+        }
     }
     
 }

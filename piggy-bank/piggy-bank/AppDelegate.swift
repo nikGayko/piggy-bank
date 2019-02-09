@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         applicationAssembly = ApplicationAssembly()
         applicationAssembly.screenRouter.configureRoot(window: window)
         
+        Appearance.configureAppearance()
+        
         return true
     }
 

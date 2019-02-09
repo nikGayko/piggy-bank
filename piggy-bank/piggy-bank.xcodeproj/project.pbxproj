@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		42ACAF2B93BAA10B6D92B3B3 /* Pods_piggy_bank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE749E0BC1F4775EA1B3513E /* Pods_piggy_bank.framework */; };
+		9329032B220EE64400DC9D70 /* BillNote+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329032A220EE64400DC9D70 /* BillNote+Extensions.swift */; };
+		9329032D220F006700DC9D70 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9329032C220F006700DC9D70 /* Group.storyboard */; };
+		93290330220F011200DC9D70 /* InputGroupTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329032F220F011200DC9D70 /* InputGroupTitleViewController.swift */; };
+		93290332220F01D600DC9D70 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290331220F01D600DC9D70 /* GroupViewModel.swift */; };
+		93290334220F24D300DC9D70 /* SelectBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290333220F24D300DC9D70 /* SelectBillViewController.swift */; };
+		93290336220F2E5300DC9D70 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290335220F2E5300DC9D70 /* RadioButton.swift */; };
+		93290338220F5AA900DC9D70 /* SelectGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290337220F5AA900DC9D70 /* SelectGroupViewController.swift */; };
+		9329033A220F5DED00DC9D70 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290339220F5DED00DC9D70 /* GroupCell.swift */; };
+		9329033C220F640900DC9D70 /* BillsListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329033B220F640900DC9D70 /* BillsListSectionHeader.swift */; };
+		9329033E220F643600DC9D70 /* BillsListSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9329033D220F643600DC9D70 /* BillsListSectionHeader.xib */; };
+		93811BD0220CCA0F00727D1C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93811BCF220CCA0F00727D1C /* Appearance.swift */; };
+		93811BD4220CE56D00727D1C /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93811BD3220CE56D00727D1C /* TabViewModel.swift */; };
 		93C1FEB5220710B700646A92 /* ScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB4220710B700646A92 /* ScreenRouter.swift */; };
 		93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB62207128700646A92 /* BillsListViewModel.swift */; };
 		93C1FEB92207130900646A92 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB82207130900646A92 /* BaseViewModel.swift */; };
@@ -47,6 +59,18 @@
 
 /* Begin PBXFileReference section */
 		2A813D44B9075DED53DB9645 /* Pods-piggy-bank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piggy-bank.release.xcconfig"; path = "Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank.release.xcconfig"; sourceTree = "<group>"; };
+		9329032A220EE64400DC9D70 /* BillNote+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BillNote+Extensions.swift"; sourceTree = "<group>"; };
+		9329032C220F006700DC9D70 /* Group.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Group.storyboard; sourceTree = "<group>"; };
+		9329032F220F011200DC9D70 /* InputGroupTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGroupTitleViewController.swift; sourceTree = "<group>"; };
+		93290331220F01D600DC9D70 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		93290333220F24D300DC9D70 /* SelectBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBillViewController.swift; sourceTree = "<group>"; };
+		93290335220F2E5300DC9D70 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		93290337220F5AA900DC9D70 /* SelectGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGroupViewController.swift; sourceTree = "<group>"; };
+		93290339220F5DED00DC9D70 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		9329033B220F640900DC9D70 /* BillsListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListSectionHeader.swift; sourceTree = "<group>"; };
+		9329033D220F643600DC9D70 /* BillsListSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillsListSectionHeader.xib; sourceTree = "<group>"; };
+		93811BCF220CCA0F00727D1C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		93811BD3220CE56D00727D1C /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
 		93C1FEB4220710B700646A92 /* ScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouter.swift; sourceTree = "<group>"; };
 		93C1FEB62207128700646A92 /* BillsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewModel.swift; sourceTree = "<group>"; };
 		93C1FEB82207130900646A92 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -108,12 +132,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9329032E220F00EA00DC9D70 /* ComposeGroup */ = {
+			isa = PBXGroup;
+			children = (
+				9329032F220F011200DC9D70 /* InputGroupTitleViewController.swift */,
+				93290333220F24D300DC9D70 /* SelectBillViewController.swift */,
+			);
+			path = ComposeGroup;
+			sourceTree = "<group>";
+		};
 		93C1FEBA2207139E00646A92 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
 				93C1FEBB220713AA00646A92 /* ViewModelAssembly.swift */,
 				93C1FEBD22071B7400646A92 /* ModelAssembly.swift */,
 				93C1FEBF22071C4700646A92 /* ApplicationAssembly.swift */,
+				93811BCF220CCA0F00727D1C /* Appearance.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -128,6 +162,7 @@
 				93C1FEDB2207896200646A92 /* EdgedTextField.swift */,
 				93C1FEE422079E2B00646A92 /* UISearchBar+Extensions.swift */,
 				93C1FEE82207A15F00646A92 /* UIFont+standard.swift */,
+				93290335220F2E5300DC9D70 /* RadioButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -144,10 +179,13 @@
 		93C1FEDD220794B100646A92 /* ComposeBill */ = {
 			isa = PBXGroup;
 			children = (
+				93290337220F5AA900DC9D70 /* SelectGroupViewController.swift */,
 				93C1FEE22207952F00646A92 /* ComposeBillPageViewController.swift */,
 				93C1FED7220782A700646A92 /* InputBillTitleViewController.swift */,
 				93C1FEDE2207950E00646A92 /* SelectCurrencyViewController.swift */,
+				93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */,
 				93C1FEE02207951A00646A92 /* InputAmountViewController.swift */,
+				93290339220F5DED00DC9D70 /* GroupCell.swift */,
 			);
 			path = ComposeBill;
 			sourceTree = "<group>";
@@ -201,7 +239,8 @@
 				93F991D922070CF500AA88AF /* BillsListViewController.swift */,
 				93C1FEC3220722E700646A92 /* BillTableViewCell.swift */,
 				93C1FEDD220794B100646A92 /* ComposeBill */,
-				93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */,
+				9329032E220F00EA00DC9D70 /* ComposeGroup */,
+				9329033B220F640900DC9D70 /* BillsListSectionHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +251,7 @@
 				93C1FEEE2208D12D00646A92 /* PiggyBank.xcdatamodeld */,
 				93C1FEF12208D24600646A92 /* CoreDataManager.swift */,
 				93C1FEFA220B618400646A92 /* Currency.swift */,
+				9329032A220EE64400DC9D70 /* BillNote+Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +262,8 @@
 				93C1FEB62207128700646A92 /* BillsListViewModel.swift */,
 				93C1FEB82207130900646A92 /* BaseViewModel.swift */,
 				93C1FED9220782CB00646A92 /* ComposeBillViewModel.swift */,
+				93811BD3220CE56D00727D1C /* TabViewModel.swift */,
+				93290331220F01D600DC9D70 /* GroupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +276,7 @@
 				93C1FEF5220A1FE800646A92 /* Cells */,
 				93F991DE22070CF600AA88AF /* Assets.xcassets */,
 				93F991E322070CF600AA88AF /* Info.plist */,
+				9329033D220F643600DC9D70 /* BillsListSectionHeader.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -253,6 +296,7 @@
 			children = (
 				93F991DB22070CF500AA88AF /* Main.storyboard */,
 				93F991E022070CF600AA88AF /* LaunchScreen.storyboard */,
+				9329032C220F006700DC9D70 /* Group.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -330,7 +374,9 @@
 				93F991E222070CF600AA88AF /* LaunchScreen.storyboard in Resources */,
 				93C1FECC2207292A00646A92 /* CTC Splash Rounded-bold.otf in Resources */,
 				93F991DF22070CF600AA88AF /* Assets.xcassets in Resources */,
+				9329032D220F006700DC9D70 /* Group.storyboard in Resources */,
 				93C1FECD2207292A00646A92 /* CTC Splash Rounded-regular.otf in Resources */,
+				9329033E220F643600DC9D70 /* BillsListSectionHeader.xib in Resources */,
 				93F991DD22070CF500AA88AF /* Main.storyboard in Resources */,
 				93C1FEF7220A200400646A92 /* CurrencyCollectionViewCell.xib in Resources */,
 			);
@@ -404,7 +450,9 @@
 				93C1FEC92207275A00646A92 /* RoundedViews.swift in Sources */,
 				93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */,
 				93F991F122070E6400AA88AF /* NetworkService.swift in Sources */,
+				9329033C220F640900DC9D70 /* BillsListSectionHeader.swift in Sources */,
 				93C1FED222072B7700646A92 /* UIStoryboard+instantiateVC.swift in Sources */,
+				93811BD0220CCA0F00727D1C /* Appearance.swift in Sources */,
 				93C1FEF22208D24600646A92 /* CoreDataManager.swift in Sources */,
 				93C1FED6220733BE00646A92 /* View+Extensions.swift in Sources */,
 				93C1FEDC2207896200646A92 /* EdgedTextField.swift in Sources */,
@@ -416,15 +464,23 @@
 				93C1FEE32207952F00646A92 /* ComposeBillPageViewController.swift in Sources */,
 				93C1FEB5220710B700646A92 /* ScreenRouter.swift in Sources */,
 				93C1FED8220782A700646A92 /* InputBillTitleViewController.swift in Sources */,
+				93811BD4220CE56D00727D1C /* TabViewModel.swift in Sources */,
+				93290338220F5AA900DC9D70 /* SelectGroupViewController.swift in Sources */,
 				93C1FEF9220A210100646A92 /* CurrencyCollectionViewCell.swift in Sources */,
 				93C1FEC4220722E700646A92 /* BillTableViewCell.swift in Sources */,
 				93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */,
 				93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */,
+				93290336220F2E5300DC9D70 /* RadioButton.swift in Sources */,
 				93C1FEDF2207950E00646A92 /* SelectCurrencyViewController.swift in Sources */,
+				93290332220F01D600DC9D70 /* GroupViewModel.swift in Sources */,
 				93C1FEEB2208C7A400646A92 /* NetworkError.swift in Sources */,
 				93C1FEB92207130900646A92 /* BaseViewModel.swift in Sources */,
+				9329032B220EE64400DC9D70 /* BillNote+Extensions.swift in Sources */,
+				9329033A220F5DED00DC9D70 /* GroupCell.swift in Sources */,
 				93C1FEC022071C4700646A92 /* ApplicationAssembly.swift in Sources */,
+				93290334220F24D300DC9D70 /* SelectBillViewController.swift in Sources */,
 				93C1FEE522079E2B00646A92 /* UISearchBar+Extensions.swift in Sources */,
+				93290330220F011200DC9D70 /* InputGroupTitleViewController.swift in Sources */,
 				93C1FEED2208CD9400646A92 /* NetworkService+Country.swift in Sources */,
 				93C1FEDA220782CB00646A92 /* ComposeBillViewModel.swift in Sources */,
 				93C1FEBE22071B7400646A92 /* ModelAssembly.swift in Sources */,

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CTC Splash Rounded-regular.otf">
+            <string>CTCSplashRounded</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2LU-zy-nXk" customClass="BillsListSectionHeader" customModule="piggy_bank" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1G-47-o4H">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <color key="backgroundColor" name="main-theme-color"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ix7-tS-kLn">
+                    <rect key="frame" x="15" y="10" width="345" height="20"/>
+                    <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ix7-tS-kLn" firstAttribute="leading" secondItem="fQq-7u-kGU" secondAttribute="leading" constant="15" id="KrH-Ro-bDz"/>
+                <constraint firstItem="q1G-47-o4H" firstAttribute="top" secondItem="2LU-zy-nXk" secondAttribute="top" id="PEV-48-EYE"/>
+                <constraint firstItem="fQq-7u-kGU" firstAttribute="trailing" secondItem="q1G-47-o4H" secondAttribute="trailing" id="Tct-Sq-Cpu"/>
+                <constraint firstAttribute="bottom" secondItem="q1G-47-o4H" secondAttribute="bottom" id="bVu-VV-hCJ"/>
+                <constraint firstItem="fQq-7u-kGU" firstAttribute="trailing" secondItem="ix7-tS-kLn" secondAttribute="trailing" constant="15" id="gWQ-v5-wxl"/>
+                <constraint firstItem="ix7-tS-kLn" firstAttribute="centerY" secondItem="fQq-7u-kGU" secondAttribute="centerY" id="tQl-Tt-83d"/>
+                <constraint firstItem="q1G-47-o4H" firstAttribute="leading" secondItem="fQq-7u-kGU" secondAttribute="leading" id="xir-6N-Cu0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fQq-7u-kGU"/>
+            <connections>
+                <outlet property="titleLabel" destination="ix7-tS-kLn" id="NPn-nG-rsY"/>
+            </connections>
+            <point key="canvasLocation" x="78.400000000000006" y="-453.37331334332839"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="main-theme-color">
+            <color red="1" green="0.78823529411764703" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -12,11 +12,10 @@ class CurrencyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var flagImageView: RoundedImageView!
     @IBOutlet weak var currencyAlphaCode: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundView = UIView()
-        backgroundView?.backgroundColor = .white
+        
         selectedBackgroundView = UIView()
         selectedBackgroundView?.backgroundColor = #colorLiteral(red: 1, green: 0.7882352941, blue: 0.1921568627, alpha: 1)
     }

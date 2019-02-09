@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveKit
 
 class ScreenRouter {
     
@@ -20,6 +21,7 @@ class ScreenRouter {
     
     private let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     private let launcStoryboard = UIStoryboard(name: "LaunchScreen", bundle: nil)
+    private let groupStoryboard = UIStoryboard(name: "Group", bundle: nil)
     
     private func show(viewController: UIViewController, presentation: Presentation, animated: Bool = true, completion: (()->Void)? = nil) {
         switch presentation {
@@ -46,7 +48,7 @@ class ScreenRouter {
         }
         
         if let navVC = mutableBase as? UINavigationController {
-            return topPresentedVC(navVC.presentedViewController)
+            return topPresentedVC(navVC.topViewController)
         }
         
         return mutableBase
@@ -83,7 +85,8 @@ extension ScreenRouter {
         guard
             let composeBillVC: InputBillTitleViewController = mainStoryboard.instantiateVC(),
             let selectCurrencyVC: SelectCurrencyViewController = mainStoryboard.instantiateVC(),
-            let inputAmountVC: InputAmountViewController = mainStoryboard.instantiateVC() else {
+            let inputAmountVC: InputAmountViewController = mainStoryboard.instantiateVC(),
+            let selectGroupVC: SelectGroupViewController = mainStoryboard.instantiateVC() else {
             return
         }
         
@@ -92,28 +95,41 @@ extension ScreenRouter {
         composeBillVC.viewModel = composeBillVM
         selectCurrencyVC.viewModel = composeBillVM
         inputAmountVC.viewModel = composeBillVM
+        selectGroupVC.viewModel = composeBillVM
         
         let pageContainerVC = PageContainerViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        pageContainerVC.controllers = [composeBillVC, selectCurrencyVC, inputAmountVC]
+        pageContainerVC.controllers = [composeBillVC, selectCurrencyVC, inputAmountVC, selectGroupVC]
         
         show(viewController: pageContainerVC, presentation: .modal)
     }
     
-    func scrollToSelectCurrency() {
-        (topPresentedVC() as? PageContainerViewController)?.openNext()
-    }
-    
-    func scrollToInputAmount() {
-        (topPresentedVC() as? PageContainerViewController)?.openNext()
-    }
-    
-    func closeComposeBill() {
+    func composeGroup() {
         guard
-            let topVC = topPresentedVC() as? PageContainerViewController else {
+            let inputTitleVC: InputGroupTitleViewController = groupStoryboard.instantiateVC(),
+            let selectBillVC: SelectBillViewController = groupStoryboard.instantiateVC() else {
                 return
         }
         
-        topVC.dismiss(animated: true, completion: nil)
+        let viewModel = viewModelAssembly.groupVM()
+        inputTitleVC.viewModel = viewModel
+        selectBillVC.viewModel = viewModel
+        
+        let pageVC = PageContainerViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        pageVC.controllers = [inputTitleVC, selectBillVC]
+        
+        topPresentedVC()?.present(pageVC, animated: true, completion: nil)
+    }
+    
+    func closeTop() {
+        topPresentedVC()?.dismiss(animated: true, completion: nil)
+    }
+    
+    func nextPage() {
+        (topPresentedVC() as? PageContainerViewController)?.openNext()
+    }
+    
+    func previousPage() {
+        (topPresentedVC() as? PageContainerViewController)?.openPrevious()
     }
 }
 

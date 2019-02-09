@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -19,31 +20,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BillTableViewCell" rowHeight="60" id="MEO-uy-mtd" customClass="BillTableViewCell" customModule="piggy_bank" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BillTableViewCell" rowHeight="88" id="MEO-uy-mtd" customClass="BillTableViewCell" customModule="piggy_bank" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MEO-uy-mtd" id="5gI-Y7-iVb">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-Wz-p23">
-                        <rect key="frame" x="15" y="5" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="UAO-Wz-p23" secondAttribute="height" multiplier="1:1" id="Qvw-5e-gkD"/>
-                            <constraint firstAttribute="width" constant="50" id="nqV-rs-E2j"/>
-                        </constraints>
-                    </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-os-pDP">
-                        <rect key="frame" x="75" y="12" width="188.5" height="36"/>
+                        <rect key="frame" x="75" y="26" width="218.5" height="35.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Сберегательный счет" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmL-LJ-XwC">
-                                <rect key="frame" x="0.0" y="0.0" width="188.5" height="19"/>
-                                <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="19"/>
+                                <rect key="frame" x="0.0" y="0.0" width="218.5" height="22"/>
+                                <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BYN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGN-Q1-2ln">
-                                <rect key="frame" x="0.0" y="19" width="188.5" height="17"/>
+                                <rect key="frame" x="0.0" y="22" width="218.5" height="13.5"/>
                                 <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -51,30 +45,81 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="320.22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txl-Ts-Jf6">
-                        <rect key="frame" x="296.5" y="20" width="63.5" height="20"/>
-                        <fontDescription key="fontDescription" name="CTCSplashRounded-Bold" family="CTC Splash Rounded" pointSize="20"/>
+                        <rect key="frame" x="303" y="35" width="57" height="18"/>
+                        <fontDescription key="fontDescription" name="CTCSplashRounded-Bold" family="CTC Splash Rounded" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="us" translatesAutoresizingMaskIntoConstraints="NO" id="U4h-pl-9NZ" customClass="RoundedImageView" customModule="piggy_bank" customModuleProvider="target">
+                        <rect key="frame" x="15" y="21.5" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="U4h-pl-9NZ" secondAttribute="height" id="Ma9-2z-vx9"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="45" id="jlM-sB-l49"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Cy-MN-3RU" customClass="RadioButton" customModule="piggy_bank" customModuleProvider="target">
+                        <rect key="frame" x="8" y="31.5" width="25" height="25"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="6Cy-MN-3RU" secondAttribute="height" multiplier="1:1" id="9DI-0N-7ip"/>
+                            <constraint firstAttribute="width" constant="25" id="jA1-0d-Gsl"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                <color key="value" name="main-theme-color"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4Dp-os-pDP" firstAttribute="leading" secondItem="UAO-Wz-p23" secondAttribute="trailing" constant="10" id="8VN-i1-U02"/>
                     <constraint firstAttribute="trailing" secondItem="Txl-Ts-Jf6" secondAttribute="trailing" constant="15" id="BFn-3D-v2t"/>
+                    <constraint firstItem="U4h-pl-9NZ" firstAttribute="centerY" secondItem="5gI-Y7-iVb" secondAttribute="centerY" id="CIi-SM-Tp2"/>
                     <constraint firstItem="Txl-Ts-Jf6" firstAttribute="centerY" secondItem="5gI-Y7-iVb" secondAttribute="centerY" id="CaR-7x-9xL"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Dp-os-pDP" secondAttribute="bottom" id="GXf-GV-Nu1"/>
-                    <constraint firstItem="UAO-Wz-p23" firstAttribute="centerY" secondItem="5gI-Y7-iVb" secondAttribute="centerY" id="Yvz-f0-EsQ"/>
-                    <constraint firstItem="4Dp-os-pDP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5gI-Y7-iVb" secondAttribute="top" id="fJY-Bl-mhA"/>
+                    <constraint firstItem="U4h-pl-9NZ" firstAttribute="leading" secondItem="5gI-Y7-iVb" secondAttribute="leading" constant="15" id="I7T-vO-7qb"/>
+                    <constraint firstItem="U4h-pl-9NZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5gI-Y7-iVb" secondAttribute="top" constant="8" id="Llr-JL-zQU"/>
+                    <constraint firstItem="4Dp-os-pDP" firstAttribute="leading" secondItem="U4h-pl-9NZ" secondAttribute="trailing" constant="15" id="Mnv-S5-dBE"/>
+                    <constraint firstItem="6Cy-MN-3RU" firstAttribute="centerY" secondItem="5gI-Y7-iVb" secondAttribute="centerY" id="Pd9-ag-SdN"/>
+                    <constraint firstItem="4Dp-os-pDP" firstAttribute="top" secondItem="5gI-Y7-iVb" secondAttribute="top" constant="26" id="dqR-9e-ntl"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="U4h-pl-9NZ" secondAttribute="bottom" constant="8" id="fPy-PG-vk5"/>
                     <constraint firstItem="Txl-Ts-Jf6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Dp-os-pDP" secondAttribute="trailing" constant="8" id="ihU-DH-fZF"/>
-                    <constraint firstItem="UAO-Wz-p23" firstAttribute="leading" secondItem="5gI-Y7-iVb" secondAttribute="leading" constant="15" id="nEP-3Q-Ild"/>
+                    <constraint firstItem="6Cy-MN-3RU" firstAttribute="leading" secondItem="5gI-Y7-iVb" secondAttribute="leading" constant="8" id="kuf-es-Hsr"/>
+                    <constraint firstAttribute="bottom" secondItem="4Dp-os-pDP" secondAttribute="bottom" constant="26" id="x6z-9M-xsV"/>
                     <constraint firstItem="4Dp-os-pDP" firstAttribute="centerY" secondItem="5gI-Y7-iVb" secondAttribute="centerY" id="xtx-tf-RXo"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="amountLabel" destination="Txl-Ts-Jf6" id="tBS-K1-3Zs"/>
                 <outlet property="currencyLabel" destination="vGN-Q1-2ln" id="KA4-z9-cqH"/>
-                <outlet property="flagImageView" destination="UAO-Wz-p23" id="Ywc-zp-Dlx"/>
+                <outlet property="flagImageView" destination="U4h-pl-9NZ" id="DwN-Mq-iWr"/>
+                <outlet property="flagLeadingConstraint" destination="I7T-vO-7qb" id="RwQ-Br-KzH"/>
+                <outlet property="radioButton" destination="6Cy-MN-3RU" id="8QE-9n-lUq"/>
                 <outlet property="titleLabel" destination="GmL-LJ-XwC" id="Lju-7P-PK1"/>
             </connections>
             <point key="canvasLocation" x="37.600000000000001" y="94.452773613193415"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="us" width="209" height="160"/>
+        <namedColor name="main-theme-color">
+            <color red="1" green="0.78823529411764703" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
