@@ -43,6 +43,12 @@ class ViewModelAssembly: DependencyFactory {
         })
     }
     
+    func editBillAmountVM(bill: Bill) -> EditBillAmountViewModel {
+        return scoped(EditBillAmountViewModel(bill: bill)) { instance in
+            self.setupPropertiesAndInit(instance)
+        }
+    }
+    
     private func setupPropertiesAndInit(_ viewModel: BaseViewModel) {
         viewModel.networkService = modelAssembly.networkService()
         viewModel.coreDataManager = modelAssembly.coreDataManager()

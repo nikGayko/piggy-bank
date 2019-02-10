@@ -11,6 +11,7 @@ import UIKit
 class InputBillTitleViewController: UIViewController {
     
     @IBOutlet weak var billTitleTextField: EdgedTextField!
+    @IBOutlet weak var closeBarButtonItem: UIBarButtonItem!
     
     var viewModel: ComposeBillViewModel!
     
@@ -22,6 +23,8 @@ class InputBillTitleViewController: UIViewController {
             }.dispose(in: reactive.bag)
         
         viewModel.title.bidirectionalBind(to: billTitleTextField.reactive.text).dispose(in: reactive.bag)
+        
+        closeBarButtonItem.reactive.tap.bind(to: viewModel.close).dispose(in: reactive.bag)
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -11,6 +11,7 @@ import UIKit
 class InputGroupTitleViewController: UIViewController {
     
     @IBOutlet weak var groupTextField: EdgedTextField!
+    @IBOutlet weak var closeBarButton: UIBarButtonItem!
     
     var viewModel: GroupViewModel!
     
@@ -21,6 +22,8 @@ class InputGroupTitleViewController: UIViewController {
         groupTextField.reactive.controlEvents(.editingDidEndOnExit)
             .bind(to: viewModel.openSelectBill)
             .dispose(in: reactive.bag)
+        
+        closeBarButton.reactive.tap.bind(to: viewModel.close).dispose(in: reactive.bag)
     }
     
     override func viewWillAppear(_ animated: Bool) {

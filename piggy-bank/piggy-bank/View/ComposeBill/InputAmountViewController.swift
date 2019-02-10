@@ -13,6 +13,7 @@ class InputAmountViewController: UIViewController {
     @IBOutlet weak var inputAmountTextField: EdgedTextField!
     @IBOutlet weak var completeButton: UIButton!
     @IBOutlet weak var completeButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var closeBarButton: UIBarButtonItem!
     
     var viewModel: ComposeBillViewModel!
     
@@ -54,6 +55,8 @@ class InputAmountViewController: UIViewController {
             .dispose(in: reactive.bag)
         
         viewModel.isAmountCompleteEnabled.bind(to: completeButton.reactive.isEnabled).dispose(in: reactive.bag)
+        
+        closeBarButton.reactive.tap.bind(to: viewModel.close).dispose(in: reactive.bag)
     }
     
     override func viewDidAppear(_ animated: Bool) {

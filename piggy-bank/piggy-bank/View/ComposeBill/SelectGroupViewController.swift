@@ -11,6 +11,7 @@ class SelectGroupViewController: UIViewController {
     
     @IBOutlet weak var completeButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var closeBarButtonItem: UIBarButtonItem!
     
     var viewModel: ComposeBillViewModel!
     
@@ -20,6 +21,7 @@ class SelectGroupViewController: UIViewController {
         tableView.tableFooterView = UIView()
         
         completeButton.reactive.tap.bind(to: viewModel.completeComposing).dispose(in: reactive.bag)
+        closeBarButtonItem.reactive.tap.bind(to: viewModel.close).dispose(in: reactive.bag)
     }
 }
 

@@ -19,6 +19,7 @@ class GroupViewModel: BaseViewModel {
     let removeBill = PublishSubject<IndexPath, NoError>()
     let openSelectBill = PublishSubject<Void, NoError>()
     let complete = PublishSubject<Void, NoError>()
+    let close = PublishSubject<Void, NoError>()
     
     lazy var fetchedResultController: NSFetchedResultsController<Bill> = {
         let requst: NSFetchRequest<Bill> = Bill.fetchRequest()
@@ -55,6 +56,10 @@ class GroupViewModel: BaseViewModel {
             }
             
             self?.coreDataManager.createGroup(title: title, bills: self?.selectedBills.collection ?? [] as Set)
+            self?.screenRouter.closeTop()
+        }.dispose(in: disposeBag)
+        
+        close.observeNext { [weak self] in
             self?.screenRouter.closeTop()
         }.dispose(in: disposeBag)
     }

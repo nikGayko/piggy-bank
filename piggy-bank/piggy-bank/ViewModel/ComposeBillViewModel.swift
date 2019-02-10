@@ -23,6 +23,7 @@ class ComposeBillViewModel: BaseViewModel, GroupCellBindingProtocol {
     let inputAmount = PublishSubject<Void, NoError>()
     let assignGroup = PublishSubject<Void, NoError>()
     let completeComposing = PublishSubject<Void, NoError>()
+    let close = PublishSubject<Void, NoError>()
     
     let title = Observable<String?>(nil)
     let currency = Observable<Currency?>(nil)
@@ -74,6 +75,10 @@ class ComposeBillViewModel: BaseViewModel, GroupCellBindingProtocol {
             if self?.composeBill() == true {
                 self?.screenRouter.closeTop()
             }
+        }.dispose(in: disposeBag)
+        
+        close.observeNext { [weak self] in
+            self?.screenRouter.closeTop()
         }.dispose(in: disposeBag)
         
         amount.map { $0 != nil }.bind(to: isAmountCompleteEnabled).dispose(in: disposeBag)

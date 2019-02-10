@@ -63,4 +63,18 @@ extension CoreDataManager {
         group.addToBills(bills as NSSet)
         saveContext()
     }
+    
+    func deleteObject(_ object: NSManagedObject) {
+        context.delete(object)
+        saveContext()
+    }
+    
+    func udpateAmount(bill: Bill, newAmount: Double) {
+        let billNote = BillNote(context: context)
+        billNote.amount = newAmount
+        billNote.date = Date()
+        
+        bill.addToBillNotes(billNote)
+        saveContext()
+    }
 }

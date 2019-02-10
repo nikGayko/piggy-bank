@@ -13,6 +13,7 @@ class SelectCurrencyViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var closeBarButtonItem: UIBarButtonItem!
     
     var viewModel: ComposeBillViewModel!
     
@@ -35,6 +36,7 @@ class SelectCurrencyViewController: UIViewController {
             .dispose(in: reactive.bag)
         
         continueButton.reactive.tap.bind(to: viewModel.inputAmount).dispose(in: reactive.bag)
+        closeBarButtonItem.reactive.tap.bind(to: viewModel.close).dispose(in: reactive.bag)
     }
 }
 

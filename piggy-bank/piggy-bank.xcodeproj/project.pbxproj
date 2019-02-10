@@ -49,6 +49,9 @@
 		93C1FEF7220A200400646A92 /* CurrencyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FEF6220A200400646A92 /* CurrencyCollectionViewCell.xib */; };
 		93C1FEF9220A210100646A92 /* CurrencyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */; };
 		93C1FEFB220B618400646A92 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEFA220B618400646A92 /* Currency.swift */; };
+		93DA8620221066E100B111D4 /* EditBillAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA861F221066E100B111D4 /* EditBillAmountViewController.swift */; };
+		93DA86222210670400B111D4 /* EditBillAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA86212210670400B111D4 /* EditBillAmountViewModel.swift */; };
+		93DA862422106A6200B111D4 /* Bill+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA862322106A6200B111D4 /* Bill+Extensions.swift */; };
 		93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D722070CF500AA88AF /* AppDelegate.swift */; };
 		93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D922070CF500AA88AF /* BillsListViewController.swift */; };
 		93F991DD22070CF500AA88AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DB22070CF500AA88AF /* Main.storyboard */; };
@@ -100,6 +103,9 @@
 		93C1FEF6220A200400646A92 /* CurrencyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyCollectionViewCell.xib; sourceTree = "<group>"; };
 		93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCollectionViewCell.swift; sourceTree = "<group>"; };
 		93C1FEFA220B618400646A92 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		93DA861F221066E100B111D4 /* EditBillAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBillAmountViewController.swift; sourceTree = "<group>"; };
+		93DA86212210670400B111D4 /* EditBillAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBillAmountViewModel.swift; sourceTree = "<group>"; };
+		93DA862322106A6200B111D4 /* Bill+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+Extensions.swift"; sourceTree = "<group>"; };
 		93F991D422070CF500AA88AF /* piggy-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F991D722070CF500AA88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F991D922070CF500AA88AF /* BillsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +247,7 @@
 				93C1FEDD220794B100646A92 /* ComposeBill */,
 				9329032E220F00EA00DC9D70 /* ComposeGroup */,
 				9329033B220F640900DC9D70 /* BillsListSectionHeader.swift */,
+				93DA861F221066E100B111D4 /* EditBillAmountViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 				93C1FEF12208D24600646A92 /* CoreDataManager.swift */,
 				93C1FEFA220B618400646A92 /* Currency.swift */,
 				9329032A220EE64400DC9D70 /* BillNote+Extensions.swift */,
+				93DA862322106A6200B111D4 /* Bill+Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +272,7 @@
 				93C1FED9220782CB00646A92 /* ComposeBillViewModel.swift */,
 				93811BD3220CE56D00727D1C /* TabViewModel.swift */,
 				93290331220F01D600DC9D70 /* GroupViewModel.swift */,
+				93DA86212210670400B111D4 /* EditBillAmountViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -446,6 +455,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DA8620221066E100B111D4 /* EditBillAmountViewController.swift in Sources */,
+				93DA86222210670400B111D4 /* EditBillAmountViewModel.swift in Sources */,
 				93C1FEE12207951A00646A92 /* InputAmountViewController.swift in Sources */,
 				93C1FEC92207275A00646A92 /* RoundedViews.swift in Sources */,
 				93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */,
@@ -471,6 +482,7 @@
 				93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */,
 				93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */,
 				93290336220F2E5300DC9D70 /* RadioButton.swift in Sources */,
+				93DA862422106A6200B111D4 /* Bill+Extensions.swift in Sources */,
 				93C1FEDF2207950E00646A92 /* SelectCurrencyViewController.swift in Sources */,
 				93290332220F01D600DC9D70 /* GroupViewModel.swift in Sources */,
 				93C1FEEB2208C7A400646A92 /* NetworkError.swift in Sources */,

@@ -52,6 +52,7 @@ class BillTableViewCell: UITableViewCell {
     
     func configure(bill: Bill) {
         titleLabel.text = bill.title
+        amountLabel.text = currencyFormatter.string(from: NSNumber(value: bill.amount ?? 0.0))
         
         if let currency = bill.currency,
             let currencyType = CurrencyType(rawValue: currency.lowercased()) {
@@ -59,9 +60,6 @@ class BillTableViewCell: UITableViewCell {
             let currency = Currency(type: currencyType)
             flagImageView.image = currency.flag
             currencyLabel.text = currency.name
-        }
-        if let lastBillNote = bill.billNotes?.sortedArray(using: [BillNote.dateSortDescriptor]).last as? BillNote {
-            amountLabel.text = currencyFormatter.string(from: NSNumber(value: lastBillNote.amount))
         }
     }
     

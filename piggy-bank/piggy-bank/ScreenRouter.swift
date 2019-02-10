@@ -120,6 +120,17 @@ extension ScreenRouter {
         topPresentedVC()?.present(pageVC, animated: true, completion: nil)
     }
     
+    func openEditBill(_ bill: Bill) {
+        guard
+            let editBill: EditBillAmountViewController = mainStoryboard.instantiateVC() else {
+            return
+        }
+        
+        editBill.viewModel = viewModelAssembly.editBillAmountVM(bill: bill)
+        
+        show(viewController: editBill, presentation: .modal)
+    }
+    
     func closeTop() {
         topPresentedVC()?.dismiss(animated: true, completion: nil)
     }

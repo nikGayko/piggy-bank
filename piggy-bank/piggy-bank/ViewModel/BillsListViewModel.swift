@@ -18,6 +18,7 @@ class BillsListViewModel: BaseViewModel {
     
     let createBill = PublishSubject<Void, NoError>()
     let createGroup = PublishSubject<Void, NoError>()
+    let editBill = PublishSubject<IndexPath, NoError>()
     
     lazy var fetchResultController: NSFetchedResultsController<Bill> = {
         let request: NSFetchRequest<Bill> = Bill.fetchRequest()
@@ -51,12 +52,24 @@ class BillsListViewModel: BaseViewModel {
                 self?.updateValues()
         }.dispose(in: disposeBag)
         
+        editBill
+            .map { [weak self] in self?.fetchResultController.object(at: $0)}
+            .ignoreNil()
+            .observeNext { [weak self] (bill) in
+                self?.screenRouter.openEditBill(bill)
+        }.dispose(in: disposeBag)
+        
         updateValues()
     }
     
     func sectionTitle(_ section: Int) -> String? {
         let object = fetchResultController.sections?[section].objects?.first as? Bill
         return object?.group?.title
+    }
+    
+    func remove(at indexPath: IndexPath) {
+        let obj = fetchResultController.object(at: indexPath)
+        coreDataManager.deleteObject(obj)
     }
     
     private func updateValues() {

@@ -12,6 +12,7 @@ class SelectBillViewController: UIViewController {
     @IBOutlet weak var titleContainerView: UIView!
     @IBOutlet weak var billsTableView: UITableView!
     @IBOutlet weak var completeButton: UIButton!
+    @IBOutlet weak var closeBarButton: UIBarButtonItem!
     
     var viewModel: GroupViewModel!
     
@@ -28,6 +29,7 @@ class SelectBillViewController: UIViewController {
         }
         
         completeButton.reactive.tap.bind(to: viewModel.complete).dispose(in: reactive.bag)
+        closeBarButton.reactive.tap.bind(to: viewModel.close).dispose(in: reactive.bag)
     }
     
 }
