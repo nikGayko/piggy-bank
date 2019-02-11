@@ -52,6 +52,57 @@
 		93DA8620221066E100B111D4 /* EditBillAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA861F221066E100B111D4 /* EditBillAmountViewController.swift */; };
 		93DA86222210670400B111D4 /* EditBillAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA86212210670400B111D4 /* EditBillAmountViewModel.swift */; };
 		93DA862422106A6200B111D4 /* Bill+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA862322106A6200B111D4 /* Bill+Extensions.swift */; };
+		93DA862822107ED200B111D4 /* EditBillAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA861F221066E100B111D4 /* EditBillAmountViewController.swift */; };
+		93DA862922107ED200B111D4 /* EditBillAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA86212210670400B111D4 /* EditBillAmountViewModel.swift */; };
+		93DA862A22107ED200B111D4 /* InputAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE02207951A00646A92 /* InputAmountViewController.swift */; };
+		93DA862B22107ED200B111D4 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEC82207275A00646A92 /* RoundedViews.swift */; };
+		93DA862C22107ED200B111D4 /* BillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D922070CF500AA88AF /* BillsListViewController.swift */; };
+		93DA862D22107ED200B111D4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991F022070E6400AA88AF /* NetworkService.swift */; };
+		93DA862E22107ED200B111D4 /* BillsListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329033B220F640900DC9D70 /* BillsListSectionHeader.swift */; };
+		93DA862F22107ED200B111D4 /* UIStoryboard+instantiateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FED122072B7700646A92 /* UIStoryboard+instantiateVC.swift */; };
+		93DA863022107ED200B111D4 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93811BCF220CCA0F00727D1C /* Appearance.swift */; };
+		93DA863122107ED200B111D4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEF12208D24600646A92 /* CoreDataManager.swift */; };
+		93DA863222107ED200B111D4 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FED5220733BE00646A92 /* View+Extensions.swift */; };
+		93DA863322107ED200B111D4 /* EdgedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEDB2207896200646A92 /* EdgedTextField.swift */; };
+		93DA863422107ED200B111D4 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FED322072D8700646A92 /* ReusableView.swift */; };
+		93DA863522107ED200B111D4 /* PiggyBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEEE2208D12D00646A92 /* PiggyBank.xcdatamodeld */; };
+		93DA863622107ED200B111D4 /* UIFont+standard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE82207A15F00646A92 /* UIFont+standard.swift */; };
+		93DA863722107ED200B111D4 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEBB220713AA00646A92 /* ViewModelAssembly.swift */; };
+		93DA863822107ED200B111D4 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEFA220B618400646A92 /* Currency.swift */; };
+		93DA863922107ED200B111D4 /* ComposeBillPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE22207952F00646A92 /* ComposeBillPageViewController.swift */; };
+		93DA863A22107ED200B111D4 /* ScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB4220710B700646A92 /* ScreenRouter.swift */; };
+		93DA863B22107ED200B111D4 /* InputBillTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FED7220782A700646A92 /* InputBillTitleViewController.swift */; };
+		93DA863C22107ED200B111D4 /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93811BD3220CE56D00727D1C /* TabViewModel.swift */; };
+		93DA863D22107ED200B111D4 /* SelectGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290337220F5AA900DC9D70 /* SelectGroupViewController.swift */; };
+		93DA863E22107ED200B111D4 /* CurrencyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */; };
+		93DA863F22107ED200B111D4 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEC3220722E700646A92 /* BillTableViewCell.swift */; };
+		93DA864022107ED200B111D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D722070CF500AA88AF /* AppDelegate.swift */; };
+		93DA864122107ED200B111D4 /* BillsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB62207128700646A92 /* BillsListViewModel.swift */; };
+		93DA864222107ED200B111D4 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290335220F2E5300DC9D70 /* RadioButton.swift */; };
+		93DA864322107ED200B111D4 /* Bill+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA862322106A6200B111D4 /* Bill+Extensions.swift */; };
+		93DA864422107ED200B111D4 /* SelectCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEDE2207950E00646A92 /* SelectCurrencyViewController.swift */; };
+		93DA864522107ED200B111D4 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290331220F01D600DC9D70 /* GroupViewModel.swift */; };
+		93DA864622107ED200B111D4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEEA2208C7A400646A92 /* NetworkError.swift */; };
+		93DA864722107ED200B111D4 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB82207130900646A92 /* BaseViewModel.swift */; };
+		93DA864822107ED200B111D4 /* BillNote+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329032A220EE64400DC9D70 /* BillNote+Extensions.swift */; };
+		93DA864922107ED200B111D4 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290339220F5DED00DC9D70 /* GroupCell.swift */; };
+		93DA864A22107ED200B111D4 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEBF22071C4700646A92 /* ApplicationAssembly.swift */; };
+		93DA864B22107ED200B111D4 /* SelectBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290333220F24D300DC9D70 /* SelectBillViewController.swift */; };
+		93DA864C22107ED200B111D4 /* UISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE422079E2B00646A92 /* UISearchBar+Extensions.swift */; };
+		93DA864D22107ED200B111D4 /* InputGroupTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329032F220F011200DC9D70 /* InputGroupTitleViewController.swift */; };
+		93DA864E22107ED200B111D4 /* NetworkService+Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEEC2208CD9400646A92 /* NetworkService+Country.swift */; };
+		93DA864F22107ED200B111D4 /* ComposeBillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FED9220782CB00646A92 /* ComposeBillViewModel.swift */; };
+		93DA865022107ED200B111D4 /* ModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEBD22071B7400646A92 /* ModelAssembly.swift */; };
+		93DA865222107ED200B111D4 /* Pods_piggy_bank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE749E0BC1F4775EA1B3513E /* Pods_piggy_bank.framework */; };
+		93DA865422107ED200B111D4 /* BillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FEC1220722B800646A92 /* BillTableViewCell.xib */; };
+		93DA865522107ED200B111D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991E022070CF600AA88AF /* LaunchScreen.storyboard */; };
+		93DA865622107ED200B111D4 /* CTC Splash Rounded-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FECA2207292A00646A92 /* CTC Splash Rounded-bold.otf */; };
+		93DA865722107ED200B111D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DE22070CF600AA88AF /* Assets.xcassets */; };
+		93DA865822107ED200B111D4 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9329032C220F006700DC9D70 /* Group.storyboard */; };
+		93DA865922107ED200B111D4 /* CTC Splash Rounded-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FECB2207292A00646A92 /* CTC Splash Rounded-regular.otf */; };
+		93DA865A22107ED200B111D4 /* BillsListSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9329033D220F643600DC9D70 /* BillsListSectionHeader.xib */; };
+		93DA865B22107ED200B111D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DB22070CF500AA88AF /* Main.storyboard */; };
+		93DA865C22107ED200B111D4 /* CurrencyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FEF6220A200400646A92 /* CurrencyCollectionViewCell.xib */; };
 		93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D722070CF500AA88AF /* AppDelegate.swift */; };
 		93F991DA22070CF500AA88AF /* BillsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D922070CF500AA88AF /* BillsListViewController.swift */; };
 		93F991DD22070CF500AA88AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F991DB22070CF500AA88AF /* Main.storyboard */; };
@@ -106,6 +157,8 @@
 		93DA861F221066E100B111D4 /* EditBillAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBillAmountViewController.swift; sourceTree = "<group>"; };
 		93DA86212210670400B111D4 /* EditBillAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBillAmountViewModel.swift; sourceTree = "<group>"; };
 		93DA862322106A6200B111D4 /* Bill+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+Extensions.swift"; sourceTree = "<group>"; };
+		93DA866122107ED200B111D4 /* piggy-bank dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93DA866222107ED300B111D4 /* piggy-bank dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "piggy-bank dev-Info.plist"; path = "/Users/nik.gayko/Projects/piggy-bank/piggy-bank/piggy-bank dev-Info.plist"; sourceTree = "<absolute>"; };
 		93F991D422070CF500AA88AF /* piggy-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F991D722070CF500AA88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F991D922070CF500AA88AF /* BillsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +172,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		93DA865122107ED200B111D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93DA865222107ED200B111D4 /* Pods_piggy_bank.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93F991D122070CF500AA88AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				93F991D422070CF500AA88AF /* piggy-bank.app */,
+				93DA866122107ED200B111D4 /* piggy-bank dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,6 +347,7 @@
 				93C1FEF5220A1FE800646A92 /* Cells */,
 				93F991DE22070CF600AA88AF /* Assets.xcassets */,
 				93F991E322070CF600AA88AF /* Info.plist */,
+				93DA866222107ED300B111D4 /* piggy-bank dev-Info.plist */,
 				9329033D220F643600DC9D70 /* BillsListSectionHeader.xib */,
 			);
 			path = Resources;
@@ -322,6 +385,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		93DA862522107ED200B111D4 /* piggy-bank dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93DA865E22107ED200B111D4 /* Build configuration list for PBXNativeTarget "piggy-bank dev" */;
+			buildPhases = (
+				93DA862622107ED200B111D4 /* [CP] Check Pods Manifest.lock */,
+				93DA862722107ED200B111D4 /* Sources */,
+				93DA865122107ED200B111D4 /* Frameworks */,
+				93DA865322107ED200B111D4 /* Resources */,
+				93DA865D22107ED200B111D4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "piggy-bank dev";
+			productName = "piggy-bank";
+			productReference = 93DA866122107ED200B111D4 /* piggy-bank dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 		93F991D322070CF500AA88AF /* piggy-bank */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93F991E622070CF600AA88AF /* Build configuration list for PBXNativeTarget "piggy-bank" */;
@@ -370,11 +452,28 @@
 			projectRoot = "";
 			targets = (
 				93F991D322070CF500AA88AF /* piggy-bank */,
+				93DA862522107ED200B111D4 /* piggy-bank dev */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		93DA865322107ED200B111D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93DA865422107ED200B111D4 /* BillTableViewCell.xib in Resources */,
+				93DA865522107ED200B111D4 /* LaunchScreen.storyboard in Resources */,
+				93DA865622107ED200B111D4 /* CTC Splash Rounded-bold.otf in Resources */,
+				93DA865722107ED200B111D4 /* Assets.xcassets in Resources */,
+				93DA865822107ED200B111D4 /* Group.storyboard in Resources */,
+				93DA865922107ED200B111D4 /* CTC Splash Rounded-regular.otf in Resources */,
+				93DA865A22107ED200B111D4 /* BillsListSectionHeader.xib in Resources */,
+				93DA865B22107ED200B111D4 /* Main.storyboard in Resources */,
+				93DA865C22107ED200B111D4 /* CurrencyCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93F991D222070CF500AA88AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -395,6 +494,60 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		10E0274A03B62540E5AEAF2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicJSON/DynamicJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/FieryCrucible/FieryCrucible.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FieryCrucible.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-piggy-bank/Pods-piggy-bank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93DA862622107ED200B111D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-piggy-bank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93DA865D22107ED200B111D4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -451,6 +604,54 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		93DA862722107ED200B111D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93DA862822107ED200B111D4 /* EditBillAmountViewController.swift in Sources */,
+				93DA862922107ED200B111D4 /* EditBillAmountViewModel.swift in Sources */,
+				93DA862A22107ED200B111D4 /* InputAmountViewController.swift in Sources */,
+				93DA862B22107ED200B111D4 /* RoundedViews.swift in Sources */,
+				93DA862C22107ED200B111D4 /* BillsListViewController.swift in Sources */,
+				93DA862D22107ED200B111D4 /* NetworkService.swift in Sources */,
+				93DA862E22107ED200B111D4 /* BillsListSectionHeader.swift in Sources */,
+				93DA862F22107ED200B111D4 /* UIStoryboard+instantiateVC.swift in Sources */,
+				93DA863022107ED200B111D4 /* Appearance.swift in Sources */,
+				93DA863122107ED200B111D4 /* CoreDataManager.swift in Sources */,
+				93DA863222107ED200B111D4 /* View+Extensions.swift in Sources */,
+				93DA863322107ED200B111D4 /* EdgedTextField.swift in Sources */,
+				93DA863422107ED200B111D4 /* ReusableView.swift in Sources */,
+				93DA863522107ED200B111D4 /* PiggyBank.xcdatamodeld in Sources */,
+				93DA863622107ED200B111D4 /* UIFont+standard.swift in Sources */,
+				93DA863722107ED200B111D4 /* ViewModelAssembly.swift in Sources */,
+				93DA863822107ED200B111D4 /* Currency.swift in Sources */,
+				93DA863922107ED200B111D4 /* ComposeBillPageViewController.swift in Sources */,
+				93DA863A22107ED200B111D4 /* ScreenRouter.swift in Sources */,
+				93DA863B22107ED200B111D4 /* InputBillTitleViewController.swift in Sources */,
+				93DA863C22107ED200B111D4 /* TabViewModel.swift in Sources */,
+				93DA863D22107ED200B111D4 /* SelectGroupViewController.swift in Sources */,
+				93DA863E22107ED200B111D4 /* CurrencyCollectionViewCell.swift in Sources */,
+				93DA863F22107ED200B111D4 /* BillTableViewCell.swift in Sources */,
+				93DA864022107ED200B111D4 /* AppDelegate.swift in Sources */,
+				93DA864122107ED200B111D4 /* BillsListViewModel.swift in Sources */,
+				93DA864222107ED200B111D4 /* RadioButton.swift in Sources */,
+				93DA864322107ED200B111D4 /* Bill+Extensions.swift in Sources */,
+				93DA864422107ED200B111D4 /* SelectCurrencyViewController.swift in Sources */,
+				93DA864522107ED200B111D4 /* GroupViewModel.swift in Sources */,
+				93DA864622107ED200B111D4 /* NetworkError.swift in Sources */,
+				93DA864722107ED200B111D4 /* BaseViewModel.swift in Sources */,
+				93DA864822107ED200B111D4 /* BillNote+Extensions.swift in Sources */,
+				93DA864922107ED200B111D4 /* GroupCell.swift in Sources */,
+				93DA864A22107ED200B111D4 /* ApplicationAssembly.swift in Sources */,
+				93DA864B22107ED200B111D4 /* SelectBillViewController.swift in Sources */,
+				93DA864C22107ED200B111D4 /* UISearchBar+Extensions.swift in Sources */,
+				93DA864D22107ED200B111D4 /* InputGroupTitleViewController.swift in Sources */,
+				93DA864E22107ED200B111D4 /* NetworkService+Country.swift in Sources */,
+				93DA864F22107ED200B111D4 /* ComposeBillViewModel.swift in Sources */,
+				93DA865022107ED200B111D4 /* ModelAssembly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93F991D022070CF500AA88AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,6 +722,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		93DA865F22107ED200B111D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9992ADEBDCFBAAC20C1003CD /* Pods-piggy-bank.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2N2SWT747N;
+				INFOPLIST_FILE = "$(SRCROOT)/piggy-bank dev-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gayko.nikita.piggy-bank.dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		93DA866022107ED200B111D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A813D44B9075DED53DB9645 /* Pods-piggy-bank.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2N2SWT747N;
+				INFOPLIST_FILE = "$(SRCROOT)/piggy-bank dev-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gayko.nikita.piggy-bank.dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		93F991E422070CF600AA88AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -678,6 +917,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		93DA865E22107ED200B111D4 /* Build configuration list for PBXNativeTarget "piggy-bank dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93DA865F22107ED200B111D4 /* Debug */,
+				93DA866022107ED200B111D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		93F991CF22070CF500AA88AF /* Build configuration list for PBXProject "piggy-bank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

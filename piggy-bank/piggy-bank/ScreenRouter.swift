@@ -19,6 +19,27 @@ class ScreenRouter {
         case root(_ window: UIWindow?)
     }
     
+    private let disposeBag = DisposeBag()
+    private var splashPlaceholder: UIView?
+    
+    init() {
+        NotificationCenter.default.reactive
+            .notification(name: UIApplication.didEnterBackgroundNotification)
+            .observeNext { [weak self] (_) in
+                self?.showSplashScreen()
+            }.dispose(in: disposeBag)
+        
+        NotificationCenter.default.reactive
+            .notification(name: UIApplication.didBecomeActiveNotification)
+            .observeNext { [weak self] (_) in
+                self?.hideSplashScreen()
+            }.dispose(in: disposeBag)
+    }
+    
+    deinit {
+        disposeBag.dispose()
+    }
+    
     private let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     private let launcStoryboard = UIStoryboard(name: "LaunchScreen", bundle: nil)
     private let groupStoryboard = UIStoryboard(name: "Group", bundle: nil)
@@ -141,6 +162,30 @@ extension ScreenRouter {
     
     func previousPage() {
         (topPresentedVC() as? PageContainerViewController)?.openPrevious()
+    }
+    
+    private func showSplashScreen() {
+        guard
+            let placeholder = launcStoryboard.instantiateInitialViewController()?.view else {
+                return
+        }
+        
+        self.splashPlaceholder = placeholder
+        keyWindow()?.addSubview(placeholder)
+        keyWindow()?.bringSubviewToFront(placeholder)
+    }
+    
+    private func hideSplashScreen() {
+        guard let placeholder = self.splashPlaceholder else {
+            return
+        }
+        splashPlaceholder = nil
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            placeholder.alpha = 0.0
+        }, completion: { _ in
+            placeholder.removeFromSuperview()
+        })
     }
 }
 
