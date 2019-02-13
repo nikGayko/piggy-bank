@@ -208,6 +208,14 @@
 			path = ComposeGroup;
 			sourceTree = "<group>";
 		};
+		9332AC5D2212154500698EE0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				93F991EE22070E2B00AA88AF /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		93C1FEBA2207139E00646A92 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,7 +300,7 @@
 				93F991EA22070E0E00AA88AF /* Model */,
 				93F991EC22070E1E00AA88AF /* ViewModel */,
 				93F991E922070DFB00AA88AF /* View */,
-				93F991EE22070E2B00AA88AF /* NetworkService */,
+				9332AC5D2212154500698EE0 /* Services */,
 				93C1FEC72207274A00646A92 /* Helpers */,
 				93F991ED22070E2400AA88AF /* Resources */,
 				93C1FEB4220710B700646A92 /* ScreenRouter.swift */,
