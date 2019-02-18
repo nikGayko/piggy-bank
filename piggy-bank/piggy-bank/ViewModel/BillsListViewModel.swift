@@ -22,9 +22,13 @@ class BillsListViewModel: BaseViewModel {
     
     lazy var fetchResultController: NSFetchedResultsController<Bill> = {
         let request: NSFetchRequest<Bill> = Bill.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "createDate", ascending: false)]
+        let sortDescriptors = [
+            NSSortDescriptor(key: "group", ascending: false),
+            NSSortDescriptor(key: "createDate", ascending: false)
+        ]
+        request.sortDescriptors = sortDescriptors
         
-        return NSFetchedResultsController(fetchRequest: request, managedObjectContext: coreDataManager.context, sectionNameKeyPath: "group", cacheName: nil)
+        return NSFetchedResultsController(fetchRequest: request, managedObjectContext: coreDataManager.context, sectionNameKeyPath: "groupTitle", cacheName: nil)
     }()
     
     override func initialize() {
@@ -63,8 +67,7 @@ class BillsListViewModel: BaseViewModel {
     }
     
     func sectionTitle(_ section: Int) -> String? {
-        let object = fetchResultController.sections?[section].objects?.first as? Bill
-        return object?.group?.title
+        return fetchResultController.sections?[section].name
     }
     
     func remove(at indexPath: IndexPath) {

@@ -45,7 +45,7 @@ extension CoreDataManager {
         let bill = Bill(context: context)
         bill.title = title
         bill.currency = currency.code
-        bill.createDate = currentDate
+        bill.createDate = currentDate as NSDate
         bill.group = group
         
         let billNote = BillNote(context: context)

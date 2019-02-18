@@ -49,9 +49,12 @@
 		93C1FEF7220A200400646A92 /* CurrencyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C1FEF6220A200400646A92 /* CurrencyCollectionViewCell.xib */; };
 		93C1FEF9220A210100646A92 /* CurrencyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */; };
 		93C1FEFB220B618400646A92 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEFA220B618400646A92 /* Currency.swift */; };
+		93D04ADC221B593A007FB8D7 /* Bill+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D04ADA221B593A007FB8D7 /* Bill+CoreDataClass.swift */; };
+		93D04ADD221B593A007FB8D7 /* Bill+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D04ADA221B593A007FB8D7 /* Bill+CoreDataClass.swift */; };
+		93D04ADE221B593A007FB8D7 /* Bill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D04ADB221B593A007FB8D7 /* Bill+CoreDataProperties.swift */; };
+		93D04ADF221B593A007FB8D7 /* Bill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D04ADB221B593A007FB8D7 /* Bill+CoreDataProperties.swift */; };
 		93DA8620221066E100B111D4 /* EditBillAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA861F221066E100B111D4 /* EditBillAmountViewController.swift */; };
 		93DA86222210670400B111D4 /* EditBillAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA86212210670400B111D4 /* EditBillAmountViewModel.swift */; };
-		93DA862422106A6200B111D4 /* Bill+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA862322106A6200B111D4 /* Bill+Extensions.swift */; };
 		93DA862822107ED200B111D4 /* EditBillAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA861F221066E100B111D4 /* EditBillAmountViewController.swift */; };
 		93DA862922107ED200B111D4 /* EditBillAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA86212210670400B111D4 /* EditBillAmountViewModel.swift */; };
 		93DA862A22107ED200B111D4 /* InputAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEE02207951A00646A92 /* InputAmountViewController.swift */; };
@@ -79,7 +82,6 @@
 		93DA864022107ED200B111D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F991D722070CF500AA88AF /* AppDelegate.swift */; };
 		93DA864122107ED200B111D4 /* BillsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB62207128700646A92 /* BillsListViewModel.swift */; };
 		93DA864222107ED200B111D4 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290335220F2E5300DC9D70 /* RadioButton.swift */; };
-		93DA864322107ED200B111D4 /* Bill+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA862322106A6200B111D4 /* Bill+Extensions.swift */; };
 		93DA864422107ED200B111D4 /* SelectCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEDE2207950E00646A92 /* SelectCurrencyViewController.swift */; };
 		93DA864522107ED200B111D4 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290331220F01D600DC9D70 /* GroupViewModel.swift */; };
 		93DA864622107ED200B111D4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEEA2208C7A400646A92 /* NetworkError.swift */; };
@@ -154,9 +156,10 @@
 		93C1FEF6220A200400646A92 /* CurrencyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyCollectionViewCell.xib; sourceTree = "<group>"; };
 		93C1FEF8220A210100646A92 /* CurrencyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCollectionViewCell.swift; sourceTree = "<group>"; };
 		93C1FEFA220B618400646A92 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		93D04ADA221B593A007FB8D7 /* Bill+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Bill+CoreDataClass.swift"; path = "/Users/nik.gayko/Projects/piggy-bank/piggy-bank/piggy-bank/Model/Bill+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		93D04ADB221B593A007FB8D7 /* Bill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Bill+CoreDataProperties.swift"; path = "/Users/nik.gayko/Projects/piggy-bank/piggy-bank/piggy-bank/Model/Bill+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		93DA861F221066E100B111D4 /* EditBillAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBillAmountViewController.swift; sourceTree = "<group>"; };
 		93DA86212210670400B111D4 /* EditBillAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBillAmountViewModel.swift; sourceTree = "<group>"; };
-		93DA862322106A6200B111D4 /* Bill+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+Extensions.swift"; sourceTree = "<group>"; };
 		93DA866122107ED200B111D4 /* piggy-bank dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DA866222107ED300B111D4 /* piggy-bank dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "piggy-bank dev-Info.plist"; path = "/Users/nik.gayko/Projects/piggy-bank/piggy-bank/piggy-bank dev-Info.plist"; sourceTree = "<absolute>"; };
 		93F991D422070CF500AA88AF /* piggy-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,7 +332,8 @@
 				93C1FEF12208D24600646A92 /* CoreDataManager.swift */,
 				93C1FEFA220B618400646A92 /* Currency.swift */,
 				9329032A220EE64400DC9D70 /* BillNote+Extensions.swift */,
-				93DA862322106A6200B111D4 /* Bill+Extensions.swift */,
+				93D04ADA221B593A007FB8D7 /* Bill+CoreDataClass.swift */,
+				93D04ADB221B593A007FB8D7 /* Bill+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -626,6 +630,7 @@
 				93DA862F22107ED200B111D4 /* UIStoryboard+instantiateVC.swift in Sources */,
 				93DA863022107ED200B111D4 /* Appearance.swift in Sources */,
 				93DA863122107ED200B111D4 /* CoreDataManager.swift in Sources */,
+				93D04ADC221B593A007FB8D7 /* Bill+CoreDataClass.swift in Sources */,
 				93DA863222107ED200B111D4 /* View+Extensions.swift in Sources */,
 				93DA863322107ED200B111D4 /* EdgedTextField.swift in Sources */,
 				93DA863422107ED200B111D4 /* ReusableView.swift in Sources */,
@@ -643,7 +648,6 @@
 				93DA864022107ED200B111D4 /* AppDelegate.swift in Sources */,
 				93DA864122107ED200B111D4 /* BillsListViewModel.swift in Sources */,
 				93DA864222107ED200B111D4 /* RadioButton.swift in Sources */,
-				93DA864322107ED200B111D4 /* Bill+Extensions.swift in Sources */,
 				93DA864422107ED200B111D4 /* SelectCurrencyViewController.swift in Sources */,
 				93DA864522107ED200B111D4 /* GroupViewModel.swift in Sources */,
 				93DA864622107ED200B111D4 /* NetworkError.swift in Sources */,
@@ -654,6 +658,7 @@
 				93DA864B22107ED200B111D4 /* SelectBillViewController.swift in Sources */,
 				93DA864C22107ED200B111D4 /* UISearchBar+Extensions.swift in Sources */,
 				93DA864D22107ED200B111D4 /* InputGroupTitleViewController.swift in Sources */,
+				93D04ADE221B593A007FB8D7 /* Bill+CoreDataProperties.swift in Sources */,
 				93DA864E22107ED200B111D4 /* NetworkService+Country.swift in Sources */,
 				93DA864F22107ED200B111D4 /* ComposeBillViewModel.swift in Sources */,
 				93DA865022107ED200B111D4 /* ModelAssembly.swift in Sources */,
@@ -674,6 +679,7 @@
 				93C1FED222072B7700646A92 /* UIStoryboard+instantiateVC.swift in Sources */,
 				93811BD0220CCA0F00727D1C /* Appearance.swift in Sources */,
 				93C1FEF22208D24600646A92 /* CoreDataManager.swift in Sources */,
+				93D04ADD221B593A007FB8D7 /* Bill+CoreDataClass.swift in Sources */,
 				93C1FED6220733BE00646A92 /* View+Extensions.swift in Sources */,
 				93C1FEDC2207896200646A92 /* EdgedTextField.swift in Sources */,
 				93C1FED422072D8700646A92 /* ReusableView.swift in Sources */,
@@ -691,7 +697,6 @@
 				93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */,
 				93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */,
 				93290336220F2E5300DC9D70 /* RadioButton.swift in Sources */,
-				93DA862422106A6200B111D4 /* Bill+Extensions.swift in Sources */,
 				93C1FEDF2207950E00646A92 /* SelectCurrencyViewController.swift in Sources */,
 				93290332220F01D600DC9D70 /* GroupViewModel.swift in Sources */,
 				93C1FEEB2208C7A400646A92 /* NetworkError.swift in Sources */,
@@ -702,6 +707,7 @@
 				93290334220F24D300DC9D70 /* SelectBillViewController.swift in Sources */,
 				93C1FEE522079E2B00646A92 /* UISearchBar+Extensions.swift in Sources */,
 				93290330220F011200DC9D70 /* InputGroupTitleViewController.swift in Sources */,
+				93D04ADF221B593A007FB8D7 /* Bill+CoreDataProperties.swift in Sources */,
 				93C1FEED2208CD9400646A92 /* NetworkService+Country.swift in Sources */,
 				93C1FEDA220782CB00646A92 /* ComposeBillViewModel.swift in Sources */,
 				93C1FEBE22071B7400646A92 /* ModelAssembly.swift in Sources */,
