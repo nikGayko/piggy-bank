@@ -18,6 +18,8 @@
 		9329033A220F5DED00DC9D70 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93290339220F5DED00DC9D70 /* GroupCell.swift */; };
 		9329033C220F640900DC9D70 /* BillsListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329033B220F640900DC9D70 /* BillsListSectionHeader.swift */; };
 		9329033E220F643600DC9D70 /* BillsListSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9329033D220F643600DC9D70 /* BillsListSectionHeader.xib */; };
+		9332AC5F2212155400698EE0 /* LocalAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9332AC5E2212155400698EE0 /* LocalAuthService.swift */; };
+		9332AC602212155700698EE0 /* LocalAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9332AC5E2212155400698EE0 /* LocalAuthService.swift */; };
 		93811BD0220CCA0F00727D1C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93811BCF220CCA0F00727D1C /* Appearance.swift */; };
 		93811BD4220CE56D00727D1C /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93811BD3220CE56D00727D1C /* TabViewModel.swift */; };
 		93C1FEB5220710B700646A92 /* ScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1FEB4220710B700646A92 /* ScreenRouter.swift */; };
@@ -133,6 +135,7 @@
 		93290339220F5DED00DC9D70 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		9329033B220F640900DC9D70 /* BillsListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsListSectionHeader.swift; sourceTree = "<group>"; };
 		9329033D220F643600DC9D70 /* BillsListSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillsListSectionHeader.xib; sourceTree = "<group>"; };
+		9332AC5E2212155400698EE0 /* LocalAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthService.swift; sourceTree = "<group>"; };
 		93811BCF220CCA0F00727D1C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		93811BD3220CE56D00727D1C /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
 		93C1FEB4220710B700646A92 /* ScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouter.swift; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				93F991EE22070E2B00AA88AF /* NetworkService */,
+				9332AC5E2212155400698EE0 /* LocalAuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -664,6 +668,7 @@
 				93DA863E22107ED200B111D4 /* CurrencyCollectionViewCell.swift in Sources */,
 				93DA863F22107ED200B111D4 /* BillTableViewCell.swift in Sources */,
 				93DA864022107ED200B111D4 /* AppDelegate.swift in Sources */,
+				9332AC602212155700698EE0 /* LocalAuthService.swift in Sources */,
 				93DA864122107ED200B111D4 /* BillsListViewModel.swift in Sources */,
 				93DA864222107ED200B111D4 /* RadioButton.swift in Sources */,
 				93DA864422107ED200B111D4 /* SelectCurrencyViewController.swift in Sources */,
@@ -717,6 +722,7 @@
 				93C1FEF9220A210100646A92 /* CurrencyCollectionViewCell.swift in Sources */,
 				93C1FEC4220722E700646A92 /* BillTableViewCell.swift in Sources */,
 				93F991D822070CF500AA88AF /* AppDelegate.swift in Sources */,
+				9332AC5F2212155400698EE0 /* LocalAuthService.swift in Sources */,
 				93C1FEB72207128700646A92 /* BillsListViewModel.swift in Sources */,
 				93290336220F2E5300DC9D70 /* RadioButton.swift in Sources */,
 				93C1FEDF2207950E00646A92 /* SelectCurrencyViewController.swift in Sources */,

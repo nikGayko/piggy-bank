@@ -198,6 +198,10 @@ extension ScreenRouter {
 }
 
 extension ScreenRouter {
+    func showError(_ nsError: NSError) {
+        showInfoAlert(title: "Ошибка", message: nsError.localizedDescription)
+    }
+    
     func showInfoAlert(title: String, message: String) {
         showAlert(title: title, message: message, actions: [AlertAction(title: "ОК", handler: nil)])
     }

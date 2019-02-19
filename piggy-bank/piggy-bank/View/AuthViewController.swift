@@ -17,7 +17,9 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        authButton.reactive.tap.bind(to: viewModel.auth).dispose(in: reactive.bag)
+        authButton.reactive.tap.observeNext { [weak self] in
+            self?.viewModel.requestAuth()
+        }.dispose(in: reactive.bag)
     }
     
 }

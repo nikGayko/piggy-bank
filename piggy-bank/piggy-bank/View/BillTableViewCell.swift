@@ -52,7 +52,7 @@ class BillTableViewCell: UITableViewCell {
     
     func configure(bill: Bill) {
         titleLabel.text = bill.title
-        amountLabel.text = currencyFormatter.string(from: NSNumber(value: bill.amount ?? 0.0))
+        amountLabel.text = currencyFormatter.string(from: NSNumber(value: bill.amount))
         
         if let currency = bill.currency,
             let currencyType = CurrencyType(rawValue: currency.lowercased()) {

@@ -51,6 +51,7 @@ class ViewModelAssembly: DependencyFactory {
     
     func authViewModel() -> AuthViewModel {
         return scoped(AuthViewModel()) { instance in
+            instance.authManager = self.modelAssembly.localAuthService()
             self.setupPropertiesAndInit(instance)
         }
     }

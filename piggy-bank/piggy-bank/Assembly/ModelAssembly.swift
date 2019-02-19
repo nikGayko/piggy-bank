@@ -21,4 +21,8 @@ class ModelAssembly: DependencyFactory {
         return shared(CoreDataManager())
     }
     
+    func localAuthService() -> LocalAuthService {
+        return shared(LocalAuthService())
+    }
+    
 }

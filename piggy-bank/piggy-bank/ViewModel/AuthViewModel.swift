@@ -11,15 +11,27 @@ import ReactiveKit
 
 class AuthViewModel: BaseViewModel {
     
-    var authManager: LocalM
-    
-    let auth = PublishSubject<Void, NoError>()
+    var authManager: LocalAuthService!
     
     override func initialize() {
         super.initialize()
         
-        auth.observeNext {
-            <#code#>
-        }
+    }
+    
+    func requestAuth() {
+        authManager.requestPin()
+            .observeOn(.main)
+            .observe { [weak self] (event) in
+                switch event {
+                case .failed(let error):
+                    self?.screenRouter.showError(error as NSError)
+                case .next(let success):
+                    if success {
+                        self?.screenRouter.openBillList()
+                    }
+                case .completed:
+                    break
+                }
+            }.dispose(in: disposeBag)
     }
 }
