@@ -52,8 +52,13 @@ class ScreenRouter {
         case .modal:
             topPresentedVC()?.present(viewController, animated: animated, completion: completion)
         case .root(let window):
-            window?.rootViewController = viewController
-            completion?()
+            guard let window = window ?? keyWindow() else { return }
+            
+            UIView.transition(with: window, duration: 0.3, options: [.transitionFlipFromLeft], animations: {
+                window.rootViewController = viewController
+            }) { (result) in
+                completion?()
+            }
         }
     }
     
