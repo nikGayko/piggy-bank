@@ -90,7 +90,7 @@ class ScreenRouter {
 
 extension ScreenRouter {
     
-    func configureRoot(window: UIWindow?) {
+    func openBillList() {
         guard
             let billsVC: BillsListViewController = mainStoryboard.instantiateVC() else {
                 return
@@ -98,7 +98,7 @@ extension ScreenRouter {
         
         billsVC.viewModel = viewModelAssembly.billsList()
         
-        show(viewController: billsVC, presentation: .root(window))
+        show(viewController: billsVC, presentation: .root(keyWindow()))
     }
     
     //MARK - Open currencies
@@ -162,6 +162,14 @@ extension ScreenRouter {
     
     func previousPage() {
         (topPresentedVC() as? PageContainerViewController)?.openPrevious()
+    }
+    
+    func openAuth(window: UIWindow?) {
+        guard let authVC: AuthViewController = mainStoryboard.instantiateVC() else {
+            return
+        }
+        authVC.viewModel = viewModelAssembly.authViewModel()
+        show(viewController: authVC, presentation: .root(window))
     }
     
     private func showSplashScreen() {

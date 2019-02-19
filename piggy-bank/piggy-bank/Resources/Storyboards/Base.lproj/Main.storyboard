@@ -19,16 +19,70 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="ftv-dc-wPq">
             <objects>
-                <viewController id="gP1-rx-Pot" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthViewController" id="gP1-rx-Pot" customClass="AuthViewController" customModule="piggy_bank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mbc-c2-2lH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iKz-fS-kSW">
+                                <rect key="frame" x="87.5" y="198.5" width="200" height="290"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="2DT-jG-RKN">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="A1d-xH-Say"/>
+                                            <constraint firstAttribute="width" secondItem="2DT-jG-RKN" secondAttribute="height" id="Z4B-OV-aHb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Требуется авторизация" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq5-DN-bfj">
+                                        <rect key="frame" x="0.0" y="230" width="200" height="60"/>
+                                        <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3O-9Z-D7y" customClass="InverseHighlitedButton" customModule="piggy_bank" customModuleProvider="target">
+                                <rect key="frame" x="50" y="528.5" width="275" height="50"/>
+                                <color key="backgroundColor" name="main-theme-color"/>
+                                <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="15" maxX="50" maxY="15"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" name="main-theme-color"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="main-theme-color"/>
+                        <constraints>
+                            <constraint firstItem="W3O-9Z-D7y" firstAttribute="top" secondItem="iKz-fS-kSW" secondAttribute="bottom" constant="40" id="E4f-Co-VQQ"/>
+                            <constraint firstItem="W3O-9Z-D7y" firstAttribute="leading" secondItem="qvN-AA-MtP" secondAttribute="leading" constant="50" id="W4B-Dy-iFd"/>
+                            <constraint firstItem="iKz-fS-kSW" firstAttribute="centerX" secondItem="qvN-AA-MtP" secondAttribute="centerX" id="dSv-30-qAs"/>
+                            <constraint firstItem="iKz-fS-kSW" firstAttribute="centerY" secondItem="qvN-AA-MtP" secondAttribute="centerY" id="nGy-RP-8XZ"/>
+                            <constraint firstItem="qvN-AA-MtP" firstAttribute="trailing" secondItem="W3O-9Z-D7y" secondAttribute="trailing" constant="50" id="prP-Z1-Snv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qvN-AA-MtP"/>
                     </view>
+                    <connections>
+                        <outlet property="authButton" destination="W3O-9Z-D7y" id="NAE-bb-7hk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1Y-6b-KSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -699,6 +753,7 @@
     <resources>
         <image name="coin" width="48" height="48"/>
         <image name="coins" width="48" height="48"/>
+        <image name="lock" width="384" height="384"/>
         <image name="money-bag-icon" width="384" height="384"/>
         <image name="selected-coin-icon" width="48" height="48"/>
         <image name="selected-coins-icon" width="48" height="48"/>

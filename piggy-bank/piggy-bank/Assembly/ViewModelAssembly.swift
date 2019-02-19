@@ -49,6 +49,12 @@ class ViewModelAssembly: DependencyFactory {
         }
     }
     
+    func authViewModel() -> AuthViewModel {
+        return scoped(AuthViewModel()) { instance in
+            self.setupPropertiesAndInit(instance)
+        }
+    }
+    
     private func setupPropertiesAndInit(_ viewModel: BaseViewModel) {
         viewModel.networkService = modelAssembly.networkService()
         viewModel.coreDataManager = modelAssembly.coreDataManager()
