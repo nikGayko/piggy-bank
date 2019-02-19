@@ -23,7 +23,7 @@ class BillsListViewModel: BaseViewModel {
     lazy var fetchResultController: NSFetchedResultsController<Bill> = {
         let request: NSFetchRequest<Bill> = Bill.fetchRequest()
         let sortDescriptors = [
-            NSSortDescriptor(key: "group", ascending: false),
+            NSSortDescriptor(key: "group.title", ascending: false),
             NSSortDescriptor(key: "createDate", ascending: false)
         ]
         request.sortDescriptors = sortDescriptors
