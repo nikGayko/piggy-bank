@@ -28,7 +28,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-os-pDP">
-                        <rect key="frame" x="75" y="26" width="218.5" height="35.5"/>
+                        <rect key="frame" x="15" y="26" width="218.5" height="35.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Сберегательный счет" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmL-LJ-XwC">
                                 <rect key="frame" x="0.0" y="0.0" width="218.5" height="22"/>
@@ -45,16 +45,16 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="320.22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txl-Ts-Jf6">
-                        <rect key="frame" x="303" y="35" width="57" height="18"/>
+                        <rect key="frame" x="274" y="35" width="57" height="18"/>
                         <fontDescription key="fontDescription" name="CTCSplashRounded-Bold" family="CTC Splash Rounded" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="us" translatesAutoresizingMaskIntoConstraints="NO" id="U4h-pl-9NZ" customClass="RoundedImageView" customModule="piggy_bank" customModuleProvider="target">
-                        <rect key="frame" x="15" y="21.5" width="45" height="45"/>
+                        <rect key="frame" x="335" y="29.5" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="U4h-pl-9NZ" secondAttribute="height" id="Ma9-2z-vx9"/>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="45" id="jlM-sB-l49"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="25" id="jlM-sB-l49"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
@@ -90,13 +90,13 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Txl-Ts-Jf6" secondAttribute="trailing" constant="15" id="BFn-3D-v2t"/>
-                    <constraint firstItem="U4h-pl-9NZ" firstAttribute="centerY" secondItem="5gI-Y7-iVb" secondAttribute="centerY" id="CIi-SM-Tp2"/>
+                    <constraint firstItem="U4h-pl-9NZ" firstAttribute="centerY" secondItem="5gI-Y7-iVb" secondAttribute="centerY" constant="-2" id="CIi-SM-Tp2"/>
                     <constraint firstItem="Txl-Ts-Jf6" firstAttribute="centerY" secondItem="5gI-Y7-iVb" secondAttribute="centerY" id="CaR-7x-9xL"/>
-                    <constraint firstItem="U4h-pl-9NZ" firstAttribute="leading" secondItem="5gI-Y7-iVb" secondAttribute="leading" constant="15" id="I7T-vO-7qb"/>
+                    <constraint firstAttribute="trailing" secondItem="U4h-pl-9NZ" secondAttribute="trailing" constant="15" id="Hg0-PM-xZp"/>
                     <constraint firstItem="U4h-pl-9NZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5gI-Y7-iVb" secondAttribute="top" constant="8" id="Llr-JL-zQU"/>
-                    <constraint firstItem="4Dp-os-pDP" firstAttribute="leading" secondItem="U4h-pl-9NZ" secondAttribute="trailing" constant="15" id="Mnv-S5-dBE"/>
+                    <constraint firstItem="4Dp-os-pDP" firstAttribute="leading" secondItem="5gI-Y7-iVb" secondAttribute="leading" constant="15" id="Mnv-S5-dBE"/>
                     <constraint firstItem="6Cy-MN-3RU" firstAttribute="centerY" secondItem="5gI-Y7-iVb" secondAttribute="centerY" id="Pd9-ag-SdN"/>
+                    <constraint firstItem="U4h-pl-9NZ" firstAttribute="leading" secondItem="Txl-Ts-Jf6" secondAttribute="trailing" constant="4" id="YPv-Da-lue"/>
                     <constraint firstItem="4Dp-os-pDP" firstAttribute="top" secondItem="5gI-Y7-iVb" secondAttribute="top" constant="26" id="dqR-9e-ntl"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="U4h-pl-9NZ" secondAttribute="bottom" constant="8" id="fPy-PG-vk5"/>
                     <constraint firstItem="Txl-Ts-Jf6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Dp-os-pDP" secondAttribute="trailing" constant="8" id="ihU-DH-fZF"/>
@@ -109,7 +109,6 @@
                 <outlet property="amountLabel" destination="Txl-Ts-Jf6" id="tBS-K1-3Zs"/>
                 <outlet property="currencyLabel" destination="vGN-Q1-2ln" id="KA4-z9-cqH"/>
                 <outlet property="flagImageView" destination="U4h-pl-9NZ" id="DwN-Mq-iWr"/>
-                <outlet property="flagLeadingConstraint" destination="I7T-vO-7qb" id="RwQ-Br-KzH"/>
                 <outlet property="radioButton" destination="6Cy-MN-3RU" id="8QE-9n-lUq"/>
                 <outlet property="titleLabel" destination="GmL-LJ-XwC" id="Lju-7P-PK1"/>
             </connections>
