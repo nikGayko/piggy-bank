@@ -28,7 +28,7 @@ class LocalAuthService {
                 return SimpleDisposable()
             }
             
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Pleeeeease") { (result, error) in
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Для использования приложения требуется авторизация") { (result, error) in
                 if let error = error {
                     observer.failed(error as NSError)
                 } else {
