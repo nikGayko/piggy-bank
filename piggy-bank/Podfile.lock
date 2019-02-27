@@ -3,34 +3,43 @@ PODS:
   - Bond (7.0.0):
     - Differ (~> 1.3)
     - ReactiveKit (~> 3.9)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
   - Differ (1.3.0)
   - DynamicJSON (2.0.0)
+  - Fabric (1.9.0)
   - FieryCrucible (3.0.1)
   - ReactiveKit (3.9.7)
 
 DEPENDENCIES:
   - Alamofire
   - Bond
+  - Crashlytics
   - DynamicJSON
+  - Fabric
   - FieryCrucible
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Bond
+    - Crashlytics
     - Differ
     - DynamicJSON
+    - Fabric
     - FieryCrucible
     - ReactiveKit
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   Bond: 7928751991aee53c1b746e82735a7214db2cb09f
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Differ: 9fcee7602542d7c6484ce05a0faec1c11258ed63
   DynamicJSON: 1ecdda7702e214f6bde11df78a07f9ec6b0ebf92
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   FieryCrucible: 066a11813aa50ca2240c79239d85bfab45d23b35
   ReactiveKit: 5f4c440715d671901c382ae6b42ed3337ce4699b
 
-PODFILE CHECKSUM: 269b620b66cbc5e8c182258d51c15f6406f6a795
+PODFILE CHECKSUM: 0fc8ff059205e9185ed9cba84d2793e576f93e33
 
 COCOAPODS: 1.5.3

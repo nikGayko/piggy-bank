@@ -1,14 +1,23 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
-target 'piggy-bank' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+def common_pods
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    pod 'Alamofire'
+    pod 'DynamicJSON'
+    pod 'Bond'
+    pod 'Alamofire'
+    pod 'FieryCrucible'
+    pod 'Fabric'
+    pod 'Crashlytics'
+end
 
-  pod 'Alamofire'
-  pod 'DynamicJSON'
-  pod 'Bond'
-  pod 'Alamofire'
-  pod 'FieryCrucible'
+target 'piggy-bank' do
+  common_pods
+end
   
+target 'piggy-bank dev' do
+  common_pods
 end
