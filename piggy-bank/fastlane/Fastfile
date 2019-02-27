@@ -1,0 +1,48 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  lane :beta do
+
+    build_app(
+      export_xcargs: "-allowProvisioningUpdates",
+      scheme: "piggy-bank",
+      export_method: "ad-hoc"
+      )
+
+    crashlytics(
+      api_token: "3724a34fdeaefc1415f7e63e76c78916c9359f36",
+      build_secret: "74f3af195e4812de814f551ea482981f657aaaf9007a36112088b03fe5fc2382"
+      )
+  end
+
+  lane :beta_dev do
+    
+    build_app(
+      export_xcargs: "-allowProvisioningUpdates",
+      scheme: "piggy-bank dev",
+      export_method: "ad-hoc"
+      )
+
+    crashlytics(
+      api_token: "3724a34fdeaefc1415f7e63e76c78916c9359f36",
+      build_secret: "74f3af195e4812de814f551ea482981f657aaaf9007a36112088b03fe5fc2382"
+      )
+  end    
+
+end
