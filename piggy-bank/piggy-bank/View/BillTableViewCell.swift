@@ -16,7 +16,7 @@ class BillTableViewCell: UITableViewCell {
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    @IBOutlet weak var flagLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var titleLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var radioButton: RadioButton!
     
     var selectionMode: Bool = false {
@@ -64,7 +64,7 @@ class BillTableViewCell: UITableViewCell {
     }
     
     private func updateState() {
-        flagLeadingConstraint.constant = selectionMode ? 40.0 : 15.0
+        titleLeadingConstraint.constant = selectionMode ? 40.0 : 15.0
 
         if selectionMode {
             radioButton.isHidden = false
