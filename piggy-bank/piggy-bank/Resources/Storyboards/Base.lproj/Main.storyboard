@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gP1-rx-Pot">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gP1-rx-Pot">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -112,12 +112,31 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gUb-mY-Zdb">
+                                                <rect key="frame" x="295" y="15" width="65" height="30"/>
+                                                <subviews>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Uwe-s9-jTl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
+                                                    </activityIndicatorView>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="5Eo-El-u3X">
+                                                        <rect key="frame" x="35" y="0.0" width="30" height="30"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="5Eo-El-u3X" secondAttribute="height" id="Hxx-zm-mJZ"/>
+                                                            <constraint firstAttribute="width" constant="30" id="odi-Ji-mGW"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="main-theme-color"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gUb-mY-Zdb" secondAttribute="trailing" constant="15" id="5wC-fN-kd2"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="foR-Mr-mcb" secondAttribute="trailing" constant="12" id="8Of-Vo-ZcO"/>
                                             <constraint firstItem="foR-Mr-mcb" firstAttribute="centerY" secondItem="Ytr-Gj-7xU" secondAttribute="centerY" id="AA9-RX-bEw"/>
                                             <constraint firstAttribute="height" constant="60" id="XuK-AY-t7I"/>
+                                            <constraint firstItem="gUb-mY-Zdb" firstAttribute="centerY" secondItem="Ytr-Gj-7xU" secondAttribute="centerY" id="d4K-7B-udH"/>
+                                            <constraint firstAttribute="width" secondItem="Ytr-Gj-7xU" secondAttribute="height" multiplier="25:4" id="j61-78-hRe"/>
                                             <constraint firstItem="foR-Mr-mcb" firstAttribute="leading" secondItem="Ytr-Gj-7xU" secondAttribute="leading" constant="22" id="qfn-Vd-ZbK"/>
                                         </constraints>
                                     </view>
@@ -148,16 +167,16 @@
                                                 <blurEffect style="light"/>
                                             </visualEffectView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ek3-WG-Wlo">
-                                                <rect key="frame" x="114.5" y="1" width="146" height="49"/>
+                                                <rect key="frame" x="132.5" y="1" width="110" height="49"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxa-fk-sgj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="49"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="49"/>
                                                         <state key="normal" image="coin"/>
                                                         <state key="selected" image="selected-coin-icon"/>
                                                         <state key="highlighted" image="selected-coin-icon"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UG-4J-dxD">
-                                                        <rect key="frame" x="98" y="0.0" width="48" height="49"/>
+                                                        <rect key="frame" x="80" y="0.0" width="30" height="49"/>
                                                         <state key="normal" image="coins"/>
                                                         <state key="selected" image="selected-coins-icon"/>
                                                         <state key="highlighted" image="selected-coins-icon"/>
@@ -197,14 +216,14 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uko-jm-vWb">
-                                <rect key="frame" x="62.5" y="87" width="250" height="464"/>
+                                <rect key="frame" x="62.5" y="151" width="250" height="336"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money-bag-icon" translatesAutoresizingMaskIntoConstraints="NO" id="izb-Eq-Yxi">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="384"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="256"/>
                                         <color key="tintColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUH-6d-0Mw">
-                                        <rect key="frame" x="8" y="414" width="234" height="50"/>
+                                        <rect key="frame" x="8" y="286" width="234" height="50"/>
                                         <color key="backgroundColor" name="main-theme-color"/>
                                         <fontDescription key="fontDescription" name="CTCSplashRounded" family="CTC Splash Rounded" pointSize="20"/>
                                         <inset key="contentEdgeInsets" minX="50" minY="15" maxX="50" maxY="15"/>
@@ -249,7 +268,9 @@
                         <outlet property="createButtonContainer" destination="Ecr-dc-aBa" id="Bj7-tp-wfw"/>
                         <outlet property="mainTitleLabel" destination="foR-Mr-mcb" id="Yg3-NQ-i93"/>
                         <outlet property="placeholderContainer" destination="uko-jm-vWb" id="YsZ-Vs-Jp5"/>
+                        <outlet property="settingsImageView" destination="5Eo-El-u3X" id="lBB-zW-Yco"/>
                         <outlet property="statusBarBackground" destination="jWV-r6-YQ2" id="F77-R4-aAJ"/>
+                        <outlet property="syncingIndicator" destination="Uwe-s9-jTl" id="afw-wV-dI5"/>
                         <outlet property="tableView" destination="AVI-G1-1TF" id="im1-fF-DZS"/>
                     </connections>
                 </viewController>
@@ -340,6 +361,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMt-8V-P8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="998" y="27"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="jaF-7w-11r">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="i3y-6B-7Jp" customClass="SettingsViewController" customModule="piggy_bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gpb-7O-Eoq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q2N-jR-8UV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b7U-gd-lCY" firstAttribute="trailing" secondItem="Q2N-jR-8UV" secondAttribute="trailing" id="8BU-wG-21V"/>
+                            <constraint firstItem="Q2N-jR-8UV" firstAttribute="leading" secondItem="b7U-gd-lCY" secondAttribute="leading" id="DU8-pi-aVh"/>
+                            <constraint firstItem="Q2N-jR-8UV" firstAttribute="top" secondItem="b7U-gd-lCY" secondAttribute="top" id="f03-vr-Pin"/>
+                            <constraint firstItem="b7U-gd-lCY" firstAttribute="bottom" secondItem="Q2N-jR-8UV" secondAttribute="bottom" id="vYa-3I-jUC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b7U-gd-lCY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="YpJ-7S-qdL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0DG-xo-X98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="744"/>
         </scene>
         <!--Edit Bill Amount View Controller-->
         <scene sceneID="xSh-pe-Zje">
@@ -751,12 +800,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coin" width="48" height="48"/>
-        <image name="coins" width="48" height="48"/>
-        <image name="lock" width="384" height="384"/>
-        <image name="money-bag-icon" width="384" height="384"/>
-        <image name="selected-coin-icon" width="48" height="48"/>
-        <image name="selected-coins-icon" width="48" height="48"/>
+        <image name="coin" width="30" height="30"/>
+        <image name="coins" width="30" height="30"/>
+        <image name="lock" width="256" height="256"/>
+        <image name="money-bag-icon" width="256" height="256"/>
+        <image name="selected-coin-icon" width="30" height="30"/>
+        <image name="selected-coins-icon" width="32" height="32"/>
+        <image name="settings" width="64" height="64"/>
         <namedColor name="main-theme-color">
             <color red="1" green="0.78823529411764703" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

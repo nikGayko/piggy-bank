@@ -12,6 +12,8 @@ def common_pods
     pod 'FieryCrucible'
     pod 'Fabric'
     pod 'Crashlytics'
+    
+    pod 'NotificationBannerSwift'
 end
 
 target 'piggy-bank' do

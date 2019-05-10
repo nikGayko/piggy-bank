@@ -32,13 +32,6 @@ class BillTableViewCell: UITableViewCell {
         }
     }
     
-    private var currencyFormatter: NumberFormatter {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .currency
-        numberFormatter.currencySymbol = ""
-        return numberFormatter
-    }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,7 +45,7 @@ class BillTableViewCell: UITableViewCell {
     
     func configure(bill: Bill) {
         titleLabel.text = bill.title
-        amountLabel.text = currencyFormatter.string(from: NSNumber(value: bill.amount))
+        amountLabel.text = NumberFormatter.currencyFormatter.string(from: bill.amount)
         
         if let currency = bill.currency,
             let currencyType = CurrencyType(rawValue: currency.lowercased()) {

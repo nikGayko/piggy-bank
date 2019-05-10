@@ -23,12 +23,16 @@ class BillsListViewController: UIViewController {
     @IBOutlet weak var coinButton: UIButton!
     @IBOutlet weak var coinGroupButton: UIButton!
     
+    @IBOutlet weak var settingsImageView: UIImageView!
+    @IBOutlet weak var syncingIndicator: UIActivityIndicatorView!
+    
     var viewModel: BillsListViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.registerCell(BillTableViewCell.self)
+        tableView.registerCell(GroupTotalTableCell.self)
         tableView.registerView(BillsListSectionHeader.self)
         
         tableView.tableFooterView = UIView()
@@ -47,7 +51,21 @@ class BillsListViewController: UIViewController {
             .bind(to: viewModel.createBill)
             .dispose(in: reactive.bag)
         
+        settingsImageView.reactive.tapGesture()
+            .map { _ in }
+            .bind(to: viewModel.openSettings)
+            .dispose(in: reactive.bag)
+        
         coinGroupButton.reactive.tap.bind(to: viewModel.createGroup).dispose(in: reactive.bag)
+        
+        viewModel.isRatesSyncing.bind(to: syncingIndicator.reactive.isAnimating).dispose(in: reactive.bag)
+        viewModel.isRatesSyncing
+            .skip(first: 1)
+            .filter { $0 }
+            .observeOn(.main)
+            .observeNext {[weak self] (syncing) in
+                self?.tableView.reloadData()
+        }.dispose(in: reactive.bag)
     }
     
 }
@@ -58,13 +76,26 @@ extension BillsListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.fetchResultController.sections?[section].numberOfObjects ?? 0
+        var numberOfObjects = viewModel.fetchResultController.sections?[section].numberOfObjects ?? 0
+        if numberOfObjects > 1 {
+            numberOfObjects += 1
+        }
+        return numberOfObjects
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: BillTableViewCell = tableView.dequeueCell(for: indexPath)
-        cell.configure(bill: viewModel.fetchResultController.object(at: indexPath))
-        return cell
+        let rowsCount = tableView.numberOfRows(inSection: indexPath.section)
+        if rowsCount > 1 && indexPath.row == rowsCount - 1 {
+            let cell: GroupTotalTableCell = tableView.dequeueCell(for: indexPath)
+            let totalAmount = viewModel.amount(section: indexPath.section)
+            cell.totalAmountLabel.text = NumberFormatter.currencyFormatter.string(from: totalAmount)
+            cell.currencyFlag.image = Currency(type: .usd).flag
+            return cell
+        } else {
+            let cell: BillTableViewCell = tableView.dequeueCell(for: indexPath)
+            cell.configure(bill: viewModel.fetchResultController.object(at: indexPath))
+            return cell
+        }
     }
 }
 

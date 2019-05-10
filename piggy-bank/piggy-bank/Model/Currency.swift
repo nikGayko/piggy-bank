@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum CurrencyType: String, CaseIterable {
+enum CurrencyType: String, CaseIterable, Codable {
     case usd
     case eur
     case gbp

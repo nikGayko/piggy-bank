@@ -27,6 +27,7 @@ class ViewModelAssembly: DependencyFactory {
     
     func billsList() -> BillsListViewModel {
         return scoped(BillsListViewModel(), configure: { (instance) in
+            instance.rateService = self.modelAssembly.currencyService()
             self.setupPropertiesAndInit(instance)
         })
     }
@@ -52,6 +53,12 @@ class ViewModelAssembly: DependencyFactory {
     func authViewModel() -> AuthViewModel {
         return scoped(AuthViewModel()) { instance in
             instance.authManager = self.modelAssembly.localAuthService()
+            self.setupPropertiesAndInit(instance)
+        }
+    }
+    
+    func settingsViewModel() -> SettingsViewModel {
+        return scoped(SettingsViewModel()) { instance in
             self.setupPropertiesAndInit(instance)
         }
     }

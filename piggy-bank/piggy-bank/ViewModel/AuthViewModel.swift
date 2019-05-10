@@ -19,7 +19,8 @@ class AuthViewModel: BaseViewModel {
     }
     
     func requestAuth() {
-        authManager.requestPin()
+//        authManager.requestPin()
+        Signal<Bool, NSError>.just(true)
             .observeOn(.main)
             .observe { [weak self] (event) in
                 switch event {

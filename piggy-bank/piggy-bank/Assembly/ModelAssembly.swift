@@ -25,4 +25,9 @@ class ModelAssembly: DependencyFactory {
         return shared(LocalAuthService())
     }
     
+    func currencyService() -> RatesService {
+        return shared(RatesService(), configure: { (instance) in
+            instance.networkService = self.networkService()
+        })
+    }
 }

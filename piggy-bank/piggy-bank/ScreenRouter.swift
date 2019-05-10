@@ -8,6 +8,7 @@
 
 import UIKit
 import ReactiveKit
+import NotificationBannerSwift
 
 class ScreenRouter {
     
@@ -16,6 +17,7 @@ class ScreenRouter {
     private enum Presentation {
         case push
         case modal
+        case embededModal
         case root(_ window: UIWindow?)
     }
     
@@ -51,6 +53,9 @@ class ScreenRouter {
             completion?()
         case .modal:
             topPresentedVC()?.present(viewController, animated: animated, completion: completion)
+        case .embededModal:
+            let embeded = UINavigationController(rootViewController: viewController)
+            topPresentedVC()?.present(embeded, animated: animated, completion: completion)
         case .root(let window):
             guard let window = window ?? keyWindow() else { return }
             
@@ -177,6 +182,14 @@ extension ScreenRouter {
         show(viewController: authVC, presentation: .root(window))
     }
     
+    func openSettings() {
+        guard let settingsVC: SettingsViewController = mainStoryboard.instantiateVC() else {
+            return
+        }
+        settingsVC.viewModel = viewModelAssembly.settingsViewModel()
+        show(viewController: settingsVC, presentation: .embededModal)
+    }
+    
     private func showSplashScreen() {
         guard
             let placeholder = launcStoryboard.instantiateInitialViewController()?.view else {
@@ -220,6 +233,23 @@ extension ScreenRouter {
         }
         
         topPresentedVC()?.present(alertVC, animated: true, completion: nil)
+    }
+}
+
+extension ScreenRouter {
+    func showCurrencySyncingBanner() {
+        let banner = StatusBarNotificationBanner(title: "Загрузка курсов", style: .none)
+        banner.show()
+    }
+    
+    func showCurrencySyncFailedBanner() {
+        let banner = StatusBarNotificationBanner(title: "Не удалось обновить курсы", style: .danger)
+        banner.show()
+    }
+    
+    func showCurrencySyncSuccessedBanner() {
+        let banner = StatusBarNotificationBanner(title: "Курсы успешно обновлены", style: .success)
+        banner.show()
     }
 }
 

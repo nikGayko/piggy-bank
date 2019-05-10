@@ -9,7 +9,12 @@ PODS:
   - DynamicJSON (2.0.0)
   - Fabric (1.9.0)
   - FieryCrucible (3.0.1)
+  - MarqueeLabel/Swift (3.2.1)
+  - NotificationBannerSwift (2.0.1):
+    - MarqueeLabel/Swift (~> 3.2.0)
+    - SnapKit (~> 4.2.0)
   - ReactiveKit (3.9.7)
+  - SnapKit (4.2.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -18,6 +23,7 @@ DEPENDENCIES:
   - DynamicJSON
   - Fabric
   - FieryCrucible
+  - NotificationBannerSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -28,7 +34,10 @@ SPEC REPOS:
     - DynamicJSON
     - Fabric
     - FieryCrucible
+    - MarqueeLabel
+    - NotificationBannerSwift
     - ReactiveKit
+    - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -38,8 +47,11 @@ SPEC CHECKSUMS:
   DynamicJSON: 1ecdda7702e214f6bde11df78a07f9ec6b0ebf92
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   FieryCrucible: 066a11813aa50ca2240c79239d85bfab45d23b35
+  MarqueeLabel: 2daf039bf916937c8a4c9adfc13577cc5e51b4ce
+  NotificationBannerSwift: 007774aa590cc9680647b92b2f217bef5c00c32c
   ReactiveKit: 5f4c440715d671901c382ae6b42ed3337ce4699b
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 0fc8ff059205e9185ed9cba84d2793e576f93e33
+PODFILE CHECKSUM: d832666d5a15b3609d71292ab9c05cb4a6a73763
 
 COCOAPODS: 1.5.3
